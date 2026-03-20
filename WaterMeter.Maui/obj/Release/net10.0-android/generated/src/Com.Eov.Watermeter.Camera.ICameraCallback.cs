@@ -1,0 +1,242 @@
+using System;
+using System.Collections.Generic;
+using Android.Runtime;
+using Java.Interop;
+
+namespace Com.Eov.Watermeter.Camera {
+
+	// Metadata.xml XPath interface reference: path="/api/package[@name='com.eov.watermeter.camera']/interface[@name='CameraCallback']"
+	[Register ("com/eov/watermeter/camera/CameraCallback", "", "Com.Eov.Watermeter.Camera.ICameraCallbackInvoker")]
+	public partial interface ICameraCallback : IJavaObject, IJavaPeerable {
+		private static readonly JniPeerMembers _members = new XAPeerMembers ("com/eov/watermeter/camera/CameraCallback", typeof (ICameraCallback), isInterface: true);
+
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter.camera']/interface[@name='CameraCallback']/method[@name='onCameraClosed' and count(parameter)=0]"
+		[Register ("onCameraClosed", "()V", "GetOnCameraClosedHandler:Com.Eov.Watermeter.Camera.ICameraCallbackInvoker, WaterMeter.Maui")]
+		void OnCameraClosed ();
+
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter.camera']/interface[@name='CameraCallback']/method[@name='onCameraError' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+		[Register ("onCameraError", "(Ljava/lang/String;)V", "GetOnCameraError_Ljava_lang_String_Handler:Com.Eov.Watermeter.Camera.ICameraCallbackInvoker, WaterMeter.Maui")]
+		void OnCameraError (string? p0);
+
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter.camera']/interface[@name='CameraCallback']/method[@name='onCameraOpened' and count(parameter)=0]"
+		[Register ("onCameraOpened", "()V", "GetOnCameraOpenedHandler:Com.Eov.Watermeter.Camera.ICameraCallbackInvoker, WaterMeter.Maui")]
+		void OnCameraOpened ();
+
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter.camera']/interface[@name='CameraCallback']/method[@name='onPhotoCaptured' and count(parameter)=1 and parameter[1][@type='android.graphics.Bitmap']]"
+		[Register ("onPhotoCaptured", "(Landroid/graphics/Bitmap;)V", "GetOnPhotoCaptured_Landroid_graphics_Bitmap_Handler:Com.Eov.Watermeter.Camera.ICameraCallbackInvoker, WaterMeter.Maui")]
+		void OnPhotoCaptured (global::Android.Graphics.Bitmap? p0);
+
+		private static Delegate? cb_onPreviewFrame_OnPreviewFrame_Landroid_graphics_Bitmap__V;
+#pragma warning disable 0169
+		private static Delegate GetOnPreviewFrame_Landroid_graphics_Bitmap_Handler ()
+		{
+			return cb_onPreviewFrame_OnPreviewFrame_Landroid_graphics_Bitmap__V ??= new _JniMarshal_PPL_V (n_OnPreviewFrame_Landroid_graphics_Bitmap_);
+		}
+
+		[global::System.Diagnostics.DebuggerDisableUserUnhandledExceptions]
+		private static void n_OnPreviewFrame_Landroid_graphics_Bitmap_ (IntPtr jnienv, IntPtr native__this, IntPtr native_bitmap)
+		{
+			if (!global::Java.Interop.JniEnvironment.BeginMarshalMethod (jnienv, out var __envp, out var __r))
+				return;
+
+			try {
+				var __this = global::Java.Lang.Object.GetObject<global::Com.Eov.Watermeter.Camera.ICameraCallback> (jnienv, native__this, JniHandleOwnership.DoNotTransfer)!;
+				var bitmap = global::Java.Lang.Object.GetObject<global::Android.Graphics.Bitmap> (native_bitmap, JniHandleOwnership.DoNotTransfer);
+				__this.OnPreviewFrame (bitmap);
+			} catch (global::System.Exception __e) {
+				__r.OnUserUnhandledException (ref __envp, __e);
+			} finally {
+				global::Java.Interop.JniEnvironment.EndMarshalMethod (ref __envp);
+			}
+		}
+#pragma warning restore 0169
+
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter.camera']/interface[@name='CameraCallback']/method[@name='onPreviewFrame' and count(parameter)=1 and parameter[1][@type='android.graphics.Bitmap']]"
+		[Register ("onPreviewFrame", "(Landroid/graphics/Bitmap;)V", "GetOnPreviewFrame_Landroid_graphics_Bitmap_Handler:Com.Eov.Watermeter.Camera.ICameraCallback, WaterMeter.Maui")]
+		virtual unsafe void OnPreviewFrame (global::Android.Graphics.Bitmap? bitmap)
+		{
+			const string __id = "onPreviewFrame.(Landroid/graphics/Bitmap;)V";
+			try {
+				JniArgumentValue* __args = stackalloc JniArgumentValue [1];
+				__args [0] = new JniArgumentValue ((bitmap == null) ? IntPtr.Zero : ((global::Java.Lang.Object) bitmap).Handle);
+				_members.InstanceMethods.InvokeVirtualVoidMethod (__id, this, __args);
+			} finally {
+				global::System.GC.KeepAlive (bitmap);
+			}
+		}
+
+	}
+
+	[global::Android.Runtime.Register ("com/eov/watermeter/camera/CameraCallback", DoNotGenerateAcw=true)]
+	internal partial class ICameraCallbackInvoker : global::Java.Lang.Object, ICameraCallback {
+		static IntPtr java_class_ref {
+			get { return _members_com_eov_watermeter_camera_CameraCallback.JniPeerType.PeerReference.Handle; }
+		}
+
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
+		public override global::Java.Interop.JniPeerMembers JniPeerMembers {
+			get { return _members_com_eov_watermeter_camera_CameraCallback; }
+		}
+
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
+		protected override IntPtr ThresholdClass {
+			get { return _members_com_eov_watermeter_camera_CameraCallback.JniPeerType.PeerReference.Handle; }
+		}
+
+		[global::System.Diagnostics.DebuggerBrowsable (global::System.Diagnostics.DebuggerBrowsableState.Never)]
+		[global::System.ComponentModel.EditorBrowsable (global::System.ComponentModel.EditorBrowsableState.Never)]
+		protected override global::System.Type ThresholdType {
+			get { return _members_com_eov_watermeter_camera_CameraCallback.ManagedPeerType; }
+		}
+
+		static readonly JniPeerMembers _members_com_eov_watermeter_camera_CameraCallback = new XAPeerMembers ("com/eov/watermeter/camera/CameraCallback", typeof (ICameraCallbackInvoker));
+
+		public ICameraCallbackInvoker (IntPtr handle, JniHandleOwnership transfer) : base (handle, transfer)
+		{
+		}
+
+		static Delegate? cb_onCameraClosed_OnCameraClosed_V;
+#pragma warning disable 0169
+		static Delegate GetOnCameraClosedHandler ()
+		{
+			return cb_onCameraClosed_OnCameraClosed_V ??= new _JniMarshal_PP_V (n_OnCameraClosed);
+		}
+
+		[global::System.Diagnostics.DebuggerDisableUserUnhandledExceptions]
+		static void n_OnCameraClosed (IntPtr jnienv, IntPtr native__this)
+		{
+			if (!global::Java.Interop.JniEnvironment.BeginMarshalMethod (jnienv, out var __envp, out var __r))
+				return;
+
+			try {
+				var __this = global::Java.Lang.Object.GetObject<global::Com.Eov.Watermeter.Camera.ICameraCallback> (jnienv, native__this, JniHandleOwnership.DoNotTransfer)!;
+				__this.OnCameraClosed ();
+			} catch (global::System.Exception __e) {
+				__r.OnUserUnhandledException (ref __envp, __e);
+			} finally {
+				global::Java.Interop.JniEnvironment.EndMarshalMethod (ref __envp);
+			}
+		}
+#pragma warning restore 0169
+
+		public unsafe void OnCameraClosed ()
+		{
+			const string __id = "onCameraClosed.()V";
+			try {
+				_members_com_eov_watermeter_camera_CameraCallback.InstanceMethods.InvokeAbstractVoidMethod (__id, this, null);
+			} finally {
+			}
+		}
+
+		static Delegate? cb_onCameraError_OnCameraError_Ljava_lang_String__V;
+#pragma warning disable 0169
+		static Delegate GetOnCameraError_Ljava_lang_String_Handler ()
+		{
+			return cb_onCameraError_OnCameraError_Ljava_lang_String__V ??= new _JniMarshal_PPL_V (n_OnCameraError_Ljava_lang_String_);
+		}
+
+		[global::System.Diagnostics.DebuggerDisableUserUnhandledExceptions]
+		static void n_OnCameraError_Ljava_lang_String_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		{
+			if (!global::Java.Interop.JniEnvironment.BeginMarshalMethod (jnienv, out var __envp, out var __r))
+				return;
+
+			try {
+				var __this = global::Java.Lang.Object.GetObject<global::Com.Eov.Watermeter.Camera.ICameraCallback> (jnienv, native__this, JniHandleOwnership.DoNotTransfer)!;
+				var p0 = JNIEnv.GetString (native_p0, JniHandleOwnership.DoNotTransfer);
+				__this.OnCameraError (p0);
+			} catch (global::System.Exception __e) {
+				__r.OnUserUnhandledException (ref __envp, __e);
+			} finally {
+				global::Java.Interop.JniEnvironment.EndMarshalMethod (ref __envp);
+			}
+		}
+#pragma warning restore 0169
+
+		public unsafe void OnCameraError (string? p0)
+		{
+			const string __id = "onCameraError.(Ljava/lang/String;)V";
+			IntPtr native_p0 = JNIEnv.NewString ((string?)p0);
+			try {
+				JniArgumentValue* __args = stackalloc JniArgumentValue [1];
+				__args [0] = new JniArgumentValue (native_p0);
+				_members_com_eov_watermeter_camera_CameraCallback.InstanceMethods.InvokeAbstractVoidMethod (__id, this, __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
+			}
+		}
+
+		static Delegate? cb_onCameraOpened_OnCameraOpened_V;
+#pragma warning disable 0169
+		static Delegate GetOnCameraOpenedHandler ()
+		{
+			return cb_onCameraOpened_OnCameraOpened_V ??= new _JniMarshal_PP_V (n_OnCameraOpened);
+		}
+
+		[global::System.Diagnostics.DebuggerDisableUserUnhandledExceptions]
+		static void n_OnCameraOpened (IntPtr jnienv, IntPtr native__this)
+		{
+			if (!global::Java.Interop.JniEnvironment.BeginMarshalMethod (jnienv, out var __envp, out var __r))
+				return;
+
+			try {
+				var __this = global::Java.Lang.Object.GetObject<global::Com.Eov.Watermeter.Camera.ICameraCallback> (jnienv, native__this, JniHandleOwnership.DoNotTransfer)!;
+				__this.OnCameraOpened ();
+			} catch (global::System.Exception __e) {
+				__r.OnUserUnhandledException (ref __envp, __e);
+			} finally {
+				global::Java.Interop.JniEnvironment.EndMarshalMethod (ref __envp);
+			}
+		}
+#pragma warning restore 0169
+
+		public unsafe void OnCameraOpened ()
+		{
+			const string __id = "onCameraOpened.()V";
+			try {
+				_members_com_eov_watermeter_camera_CameraCallback.InstanceMethods.InvokeAbstractVoidMethod (__id, this, null);
+			} finally {
+			}
+		}
+
+		static Delegate? cb_onPhotoCaptured_OnPhotoCaptured_Landroid_graphics_Bitmap__V;
+#pragma warning disable 0169
+		static Delegate GetOnPhotoCaptured_Landroid_graphics_Bitmap_Handler ()
+		{
+			return cb_onPhotoCaptured_OnPhotoCaptured_Landroid_graphics_Bitmap__V ??= new _JniMarshal_PPL_V (n_OnPhotoCaptured_Landroid_graphics_Bitmap_);
+		}
+
+		[global::System.Diagnostics.DebuggerDisableUserUnhandledExceptions]
+		static void n_OnPhotoCaptured_Landroid_graphics_Bitmap_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		{
+			if (!global::Java.Interop.JniEnvironment.BeginMarshalMethod (jnienv, out var __envp, out var __r))
+				return;
+
+			try {
+				var __this = global::Java.Lang.Object.GetObject<global::Com.Eov.Watermeter.Camera.ICameraCallback> (jnienv, native__this, JniHandleOwnership.DoNotTransfer)!;
+				var p0 = global::Java.Lang.Object.GetObject<global::Android.Graphics.Bitmap> (native_p0, JniHandleOwnership.DoNotTransfer);
+				__this.OnPhotoCaptured (p0);
+			} catch (global::System.Exception __e) {
+				__r.OnUserUnhandledException (ref __envp, __e);
+			} finally {
+				global::Java.Interop.JniEnvironment.EndMarshalMethod (ref __envp);
+			}
+		}
+#pragma warning restore 0169
+
+		public unsafe void OnPhotoCaptured (global::Android.Graphics.Bitmap? p0)
+		{
+			const string __id = "onPhotoCaptured.(Landroid/graphics/Bitmap;)V";
+			try {
+				JniArgumentValue* __args = stackalloc JniArgumentValue [1];
+				__args [0] = new JniArgumentValue ((p0 == null) ? IntPtr.Zero : ((global::Java.Lang.Object) p0).Handle);
+				_members_com_eov_watermeter_camera_CameraCallback.InstanceMethods.InvokeAbstractVoidMethod (__id, this, __args);
+			} finally {
+				global::System.GC.KeepAlive (p0);
+			}
+		}
+
+	}
+}

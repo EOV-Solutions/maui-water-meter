@@ -1,0 +1,14 @@
+/Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/bin/Debug/net9.0-ios/WaterMeter.Maui.dll
+/Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/bin/Debug/net9.0-ios/WaterMeter.Maui.pdb
+/Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-ios/_ProcessedBundleResourcesPath.items
+/Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-ios/_ProcessedContentPath.items
+/Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-ios/WaterMeter.Maui.csproj.AssemblyReference.cache
+/Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-ios/WaterMeter.Maui.GeneratedMSBuildEditorConfig.editorconfig
+/Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-ios/WaterMeter.Maui.AssemblyInfoInputs.cache
+/Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-ios/WaterMeter.Maui.AssemblyInfo.cs
+/Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-ios/WaterMeter.Maui.csproj.CoreCompileInputs.cache
+/Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-ios/WaterMeter.Maui.dll
+/Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-ios/refint/WaterMeter.Maui.dll
+/Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-ios/WaterMeter.Maui.pdb
+/Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-ios/ref/WaterMeter.Maui.dll
+/Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/bin/Debug/net9.0-ios/WaterMeter.Maui.resources.stamp

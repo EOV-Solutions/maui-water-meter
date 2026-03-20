@@ -1,0 +1,14 @@
+﻿<BindingAssembly>
+	<NativeReference Name="WaterMeterSDK.framework">
+		<ForceLoad></ForceLoad>
+		<Frameworks>AVFoundation CoreMedia CoreVideo Accelerate Metal MetalKit</Frameworks>
+		<IdentityWithoutPathSeparatorSuffix>NativeLibs/iOS/WaterMeterSDK.framework</IdentityWithoutPathSeparatorSuffix>
+		<IsCxx></IsCxx>
+		<Kind>Framework</Kind>
+		<LinkerFlags>-ObjC -all_load -lc++</LinkerFlags>
+		<LinkWithSwiftSystemLibraries></LinkWithSwiftSystemLibraries>
+		<NeedsGccExceptionHandling></NeedsGccExceptionHandling>
+		<SmartLink>True</SmartLink>
+		<WeakFrameworks></WeakFrameworks>
+	</NativeReference>
+</BindingAssembly>

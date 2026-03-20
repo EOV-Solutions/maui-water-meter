@@ -1,0 +1,331 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WaterMeter.Maui</name>
+    </assembly>
+    <members>
+        <member name="T:WaterMeter.Maui.IWaterMeterService">
+            <summary>
+            Interface for Water Meter SDK platform-specific implementations.
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.IWaterMeterService.InitializeLicenseAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+            <summary>
+            Initialize SDK with license key (required before scanning).
+            </summary>
+            <param name="licenseKey">License key string.</param>
+            <param name="metadataInfo">Optional metadata for admin tracking.</param>
+            <param name="deviceUser">Optional device user identifier.</param>
+            <returns>License result.</returns>
+        </member>
+        <member name="M:WaterMeter.Maui.IWaterMeterService.IsLicenseValidAsync">
+            <summary>
+            Check if SDK license is valid.
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.IWaterMeterService.InitializeAsync(WaterMeter.Maui.InitializeOptions)">
+            <summary>
+            Initialize the SDK engine (iOS only, Android auto-initializes).
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.IWaterMeterService.ScanAsync(WaterMeter.Maui.ScanOptions)">
+            <summary>
+            Open camera scanner to scan water meter number.
+            </summary>
+            <param name="options">Scanner options.</param>
+            <returns>Scan result with recognized text and confidence.</returns>
+        </member>
+        <member name="M:WaterMeter.Maui.IWaterMeterService.RecognizeBase64Async(System.String)">
+            <summary>
+            Recognize water meter reading from base64 encoded image.
+            </summary>
+            <param name="base64Image">Base64 encoded image (with or without data URL prefix).</param>
+        </member>
+        <member name="M:WaterMeter.Maui.IWaterMeterService.RecognizeFileAsync(System.String)">
+            <summary>
+            Recognize water meter reading from file path.
+            </summary>
+            <param name="filePath">Path to image file.</param>
+        </member>
+        <member name="M:WaterMeter.Maui.IWaterMeterService.CheckPermissionAsync">
+            <summary>
+            Check if camera permission is granted.
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.IWaterMeterService.RequestPermissionAsync">
+            <summary>
+            Request camera permission.
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.IWaterMeterService.GetVersionAsync">
+            <summary>
+            Get SDK version.
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.IWaterMeterService.IsInitializedAsync">
+            <summary>
+            Check if SDK is initialized.
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.IWaterMeterService.ResetAsync">
+            <summary>
+            Reset SDK (release resources).
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.IWaterMeterService.OpenSettingsAsync">
+            <summary>
+            Open SDK settings screen.
+            </summary>
+        </member>
+        <member name="T:WaterMeter.Maui.LicenseStatus">
+            <summary>
+            License status codes matching native SDK.
+            </summary>
+        </member>
+        <member name="F:WaterMeter.Maui.LicenseStatus.NotInitialized">
+            <summary>SDK not initialized</summary>
+        </member>
+        <member name="F:WaterMeter.Maui.LicenseStatus.Valid">
+            <summary>License is valid</summary>
+        </member>
+        <member name="F:WaterMeter.Maui.LicenseStatus.Expired">
+            <summary>License has expired</summary>
+        </member>
+        <member name="F:WaterMeter.Maui.LicenseStatus.GracePeriod">
+            <summary>License in grace period</summary>
+        </member>
+        <member name="F:WaterMeter.Maui.LicenseStatus.Invalid">
+            <summary>Invalid license key</summary>
+        </member>
+        <member name="F:WaterMeter.Maui.LicenseStatus.Blocked">
+            <summary>License has been blocked</summary>
+        </member>
+        <member name="F:WaterMeter.Maui.LicenseStatus.QuotaExceeded">
+            <summary>Quota exceeded, sync required</summary>
+        </member>
+        <member name="T:WaterMeter.Maui.LicenseResult">
+            <summary>
+            Result from license initialization/validation.
+            </summary>
+        </member>
+        <member name="P:WaterMeter.Maui.LicenseResult.Valid">
+            <summary>Whether the license is valid.</summary>
+        </member>
+        <member name="P:WaterMeter.Maui.LicenseResult.Status">
+            <summary>License status code.</summary>
+        </member>
+        <member name="P:WaterMeter.Maui.LicenseResult.Message">
+            <summary>Status message.</summary>
+        </member>
+        <member name="T:WaterMeter.Maui.ScanResult">
+            <summary>
+            OCR scan result from camera scanner or image recognition.
+            </summary>
+        </member>
+        <member name="P:WaterMeter.Maui.ScanResult.Text">
+            <summary>Recognized meter reading text.</summary>
+        </member>
+        <member name="P:WaterMeter.Maui.ScanResult.Confidence">
+            <summary>Recognition confidence (0.0 - 1.0).</summary>
+        </member>
+        <member name="P:WaterMeter.Maui.ScanResult.Success">
+            <summary>Whether the scan was successful.</summary>
+        </member>
+        <member name="P:WaterMeter.Maui.ScanResult.ImagePath">
+            <summary>Path to captured image (if available).</summary>
+        </member>
+        <member name="P:WaterMeter.Maui.ScanResult.ImageBase64">
+            <summary>Base64 encoded image (if available).</summary>
+        </member>
+        <member name="P:WaterMeter.Maui.ScanResult.FormattedReading">
+            <summary>Formatted reading with decimal point.</summary>
+        </member>
+        <member name="P:WaterMeter.Maui.ScanResult.IsReliable">
+            <summary>Whether the result is considered reliable.</summary>
+        </member>
+        <member name="P:WaterMeter.Maui.ScanResult.Message">
+            <summary>Error or status message (if any).</summary>
+        </member>
+        <member name="T:WaterMeter.Maui.ScanOptions">
+            <summary>
+            Options for camera scanner.
+            </summary>
+        </member>
+        <member name="P:WaterMeter.Maui.ScanOptions.Title">
+            <summary>Custom title for scanner screen. Default: "Quét số đồng hồ"</summary>
+        </member>
+        <member name="P:WaterMeter.Maui.ScanOptions.ShowCloseButton">
+            <summary>Show close button. Default: true</summary>
+        </member>
+        <member name="P:WaterMeter.Maui.ScanOptions.AutoCloseOnResult">
+            <summary>Auto close after scan result. Default: true</summary>
+        </member>
+        <member name="P:WaterMeter.Maui.ScanOptions.AutoCapture">
+            <summary>Auto capture when meter detected. Uses SDK settings if null.</summary>
+        </member>
+        <member name="P:WaterMeter.Maui.ScanOptions.MinConfidence">
+            <summary>Minimum confidence threshold (0.0 - 1.0). Uses SDK settings if null.</summary>
+        </member>
+        <member name="P:WaterMeter.Maui.ScanOptions.ImageMaxWidth">
+            <summary>Max width for saved image in pixels.</summary>
+        </member>
+        <member name="P:WaterMeter.Maui.ScanOptions.ImageMaxHeight">
+            <summary>Max height for saved image in pixels.</summary>
+        </member>
+        <member name="T:WaterMeter.Maui.InitializeOptions">
+            <summary>
+            SDK initialization options (iOS only, Android auto-initializes).
+            </summary>
+        </member>
+        <member name="P:WaterMeter.Maui.InitializeOptions.ThreadCount">
+            <summary>Number of threads for inference. Default: 2</summary>
+        </member>
+        <member name="P:WaterMeter.Maui.InitializeOptions.UseGPU">
+            <summary>Whether to use GPU acceleration. Default: false</summary>
+        </member>
+        <member name="P:WaterMeter.Maui.InitializeOptions.MaxSideLength">
+            <summary>Maximum image dimension. Default: 480</summary>
+        </member>
+        <member name="T:WaterMeter.Maui.PermissionResult">
+            <summary>
+            Permission check result.
+            </summary>
+        </member>
+        <member name="P:WaterMeter.Maui.PermissionResult.Granted">
+            <summary>Whether permission is granted.</summary>
+        </member>
+        <member name="P:WaterMeter.Maui.PermissionResult.Status">
+            <summary>Permission status string.</summary>
+        </member>
+        <member name="T:WaterMeter.Maui.Platforms.Android.WaterMeterActivityResultHandler">
+            <summary>
+            MainActivity base class that handles activity results for Water Meter SDK.
+            Your MainActivity should inherit from this or manually call HandleActivityResult.
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.Platforms.Android.WaterMeterActivityResultHandler.HandleActivityResult(System.Int32,Android.App.Result,Android.Content.Intent)">
+            <summary>
+            Call this from your MainActivity's OnActivityResult to handle scanner results.
+            </summary>
+        </member>
+        <member name="T:WaterMeter.Maui.Platforms.Android.WaterMeterServiceAndroid">
+            <summary>
+            Android implementation of IWaterMeterService.
+            Bridges C# calls to Android Water Meter SDK via Java/Kotlin bindings.
+            </summary>
+        </member>
+        <member name="T:WaterMeter.Maui.Platforms.Android.ActivityResultCallbackHelper">
+            <summary>
+            Helper to handle activity results in MAUI.
+            </summary>
+        </member>
+        <member name="T:WaterMeter.Maui.WaterMeterExtensions">
+            <summary>
+            Extension methods for registering Water Meter SDK with MAUI.
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.WaterMeterExtensions.UseWaterMeter(Microsoft.Maui.Hosting.MauiAppBuilder)">
+            <summary>
+            Register Water Meter SDK services with MAUI application.
+            Call this in MauiProgram.cs: builder.UseWaterMeter();
+            </summary>
+        </member>
+        <member name="T:WaterMeter.Maui.WaterMeterSdk">
+            <summary>
+            Water Meter SDK for .NET MAUI - Camera-based OCR scanning for water meter reading using AI.
+            
+            Usage:
+            <code>
+            // 1. Register in MauiProgram.cs
+            builder.UseWaterMeter();
+            
+            // 2. Initialize license (required)
+            var result = await WaterMeterSdk.InitializeLicenseAsync("YOUR_LICENSE_KEY");
+            
+            // 3. Scan water meter
+            var scan = await WaterMeterSdk.ScanAsync();
+            Console.WriteLine($"Reading: {scan.Text}");
+            </code>
+            </summary>
+        </member>
+        <member name="F:WaterMeter.Maui.WaterMeterSdk.Version">
+            <summary>SDK Version.</summary>
+        </member>
+        <member name="P:WaterMeter.Maui.WaterMeterSdk.Service">
+            <summary>
+            Get the platform-specific service implementation.
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.WaterMeterSdk.InitializeLicenseAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+            <summary>
+            Initialize SDK with license key (required before scanning).
+            </summary>
+            <param name="licenseKey">License key string.</param>
+            <param name="metadataInfo">Optional metadata for admin tracking.</param>
+            <param name="deviceUser">Optional device user identifier.</param>
+        </member>
+        <member name="M:WaterMeter.Maui.WaterMeterSdk.IsLicenseValidAsync">
+            <summary>
+            Check if SDK license is valid.
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.WaterMeterSdk.InitializeAsync(WaterMeter.Maui.InitializeOptions)">
+            <summary>
+            Initialize the SDK engine (iOS only, Android auto-initializes).
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.WaterMeterSdk.ScanAsync(WaterMeter.Maui.ScanOptions)">
+            <summary>
+            Open camera scanner to scan water meter number.
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.WaterMeterSdk.RecognizeBase64Async(System.String)">
+            <summary>
+            Recognize water meter reading from base64 encoded image.
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.WaterMeterSdk.RecognizeFileAsync(System.String)">
+            <summary>
+            Recognize water meter reading from file path.
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.WaterMeterSdk.CheckPermissionAsync">
+            <summary>
+            Check if camera permission is granted.
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.WaterMeterSdk.RequestPermissionAsync">
+            <summary>
+            Request camera permission.
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.WaterMeterSdk.GetVersionAsync">
+            <summary>
+            Get SDK version.
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.WaterMeterSdk.IsInitializedAsync">
+            <summary>
+            Check if SDK is initialized.
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.WaterMeterSdk.ResetAsync">
+            <summary>
+            Reset SDK (release resources).
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.WaterMeterSdk.OpenSettingsAsync">
+            <summary>
+            Open SDK settings screen.
+            </summary>
+        </member>
+        <member name="M:WaterMeter.Maui.WaterMeterSdk.FormatReading(System.String,System.Int32)">
+            <summary>
+            Format meter reading with decimal point.
+            </summary>
+            <param name="text">Raw reading text (e.g., "12345678").</param>
+            <param name="decimalPlaces">Number of decimal places (default: 3).</param>
+            <returns>Formatted reading (e.g., "12345.678").</returns>
+        </member>
+    </members>
+</doc>

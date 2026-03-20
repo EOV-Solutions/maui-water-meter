@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net9.0-android;net9.0-ios</TargetFrameworks>
+    <SingleProject>true</SingleProject>
+    <UseMaui>true</UseMaui>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <!-- NuGet Package Info -->
+    <PackageId>WaterMeter.Maui</PackageId>
+    <PackageVersion>1.2.0</PackageVersion>
+    <Title>Water Meter SDK for .NET MAUI</Title>
+    <Authors>EOV Solutions</Authors>
+    <Company>EOV Solutions</Company>
+    <Description>Water Meter OCR scanning SDK for .NET MAUI. Provides camera-based scanning, image recognition, license management for water meter reading using AI.</Description>
+    <PackageTags>maui;watermeter;ocr;scanner;ai;camera</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/EOV-Solutions/maui-water-meter</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/EOV-Solutions/maui-water-meter</RepositoryUrl>
+
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">12.2</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">23.0</SupportedOSPlatformVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
+    <!-- Enable source-generator based Objective-C bindings for ApiDefinition.cs -->
+    <IsBindingProject>true</IsBindingProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Maui.Controls" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="9.0.0" />
+  </ItemGroup>
+
+  <!-- Android Native Library -->
+  <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">
+    <AndroidLibrary Include="NativeLibs\Android\water_meter_sdk.aar" />
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.7.0.3" />
+    <PackageReference Include="Xamarin.AndroidX.Camera.Core" Version="1.3.4.1" />
+    <PackageReference Include="Xamarin.AndroidX.Camera.Camera2" Version="1.3.4.1" />
+    <PackageReference Include="Xamarin.AndroidX.Camera.Lifecycle" Version="1.3.4.1" />
+    <PackageReference Include="Xamarin.AndroidX.Camera.View" Version="1.3.4.1" />
+    <PackageReference Include="Xamarin.AndroidX.ConstraintLayout" Version="2.1.4.16" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Core" Version="2.8.5.1" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Common" Version="2.8.5.1" />
+    <PackageReference Include="Xamarin.AndroidX.Collection.Jvm" Version="1.4.3.1" />
+    <PackageReference Include="Xamarin.AndroidX.Collection.Ktx" Version="1.4.3.1" />
+    <!-- Align Ktx packages with their non-Ktx counterparts to avoid D8 duplicate class errors -->
+    <PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.9.2.1" />
+    <PackageReference Include="Xamarin.AndroidX.Fragment.Ktx" Version="1.8.3.1" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.Runtime.Ktx" Version="2.8.5.1" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.ViewModel.Ktx" Version="2.8.5.1" />
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData.Core.Ktx" Version="2.8.5.1" />
+  </ItemGroup>
+
+  <!-- iOS Native Framework + ObjC bindings -->
+  <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
+    <Compile Remove="Platforms/iOS/ApiDefinition.cs" />
+    <ObjcBindingApiDefinition Include="Platforms/iOS/ApiDefinition.cs" />
+
+    <NativeReference Include="NativeLibs\iOS\WaterMeterSDK.framework">
+      <Kind>Framework</Kind>
+      <SmartLink>True</SmartLink>
+      <Frameworks>AVFoundation CoreMedia CoreVideo Accelerate Metal MetalKit</Frameworks>
+      <LinkerFlags>-ObjC -all_load -lc++</LinkerFlags>
+    </NativeReference>
+  </ItemGroup>
+
+</Project>

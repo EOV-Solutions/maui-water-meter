@@ -1,0 +1,874 @@
+<api api-source="JavaTypeSystem">
+  <package name="com.eov.watermeter" jni-name="com/eov/watermeter">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="true" name="BuildConfig" static="false" visibility="public" jni-signature="Lcom/eov/watermeter/BuildConfig;">
+      <constructor deprecated="not deprecated" final="false" name="BuildConfig" jni-signature="()V" bridge="false" static="false" type="com.eov.watermeter.BuildConfig" synthetic="false" visibility="public" />
+      <field deprecated="not deprecated" final="true" name="BUILD_TYPE" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;release&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="DEBUG" jni-signature="Z" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="false" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="LIBRARY_PACKAGE_NAME" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;com.eov.watermeter&quot;" visibility="public" volatile="false" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="WaterMeterSDK" static="false" visibility="public" jni-signature="Lcom/eov/watermeter/WaterMeterSDK;">
+      <constructor deprecated="not deprecated" final="false" name="WaterMeterSDK" jni-signature="()V" bridge="false" static="false" type="com.eov.watermeter.WaterMeterSDK" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getLicenseStatus" jni-signature="()I" bridge="false" native="false" return="int" jni-return="I" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getStatusMessage" jni-signature="()Ljava/lang/String;" bridge="false" native="false" return="java.lang.String" jni-return="Ljava/lang/String;" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getStatusMessage" jni-signature="(I)Ljava/lang/String;" bridge="false" native="false" return="java.lang.String" jni-return="Ljava/lang/String;" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="status" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="incrementUsage" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="incrementUsage" jni-signature="(I)V" bridge="false" native="false" return="void" jni-return="V" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="amount" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="initialize" jni-signature="(Landroid/content/Context;Ljava/lang/String;Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;)V" bridge="false" native="false" return="void" jni-return="V" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
+        <parameter name="licenseKey" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="callback" type="com.eov.watermeter.WaterMeterSDK.LicenseCallback" jni-type="Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="initialize" jni-signature="(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;)V" bridge="false" native="false" return="void" jni-return="V" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
+        <parameter name="licenseKey" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="secretKey" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="callback" type="com.eov.watermeter.WaterMeterSDK.LicenseCallback" jni-type="Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="initialize" jni-signature="(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;)V" bridge="false" native="false" return="void" jni-return="V" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
+        <parameter name="licenseKey" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="secretKey" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="metadataInfo" type="org.json.JSONObject" jni-type="Lorg/json/JSONObject;" />
+        <parameter name="deviceUser" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="callback" type="com.eov.watermeter.WaterMeterSDK.LicenseCallback" jni-type="Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="initialize" jni-signature="(Landroid/content/Context;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;)V" bridge="false" native="false" return="void" jni-return="V" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
+        <parameter name="licenseKey" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="metadataInfo" type="org.json.JSONObject" jni-type="Lorg/json/JSONObject;" />
+        <parameter name="deviceUser" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="callback" type="com.eov.watermeter.WaterMeterSDK.LicenseCallback" jni-type="Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isLicenseValid" jni-signature="()Z" bridge="false" native="false" return="boolean" jni-return="Z" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="startCameraScan" jni-signature="(Landroid/app/Activity;I)V" bridge="false" native="false" return="void" jni-return="V" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="activity" type="android.app.Activity" jni-type="Landroid/app/Activity;" />
+        <parameter name="requestCode" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="startCameraScan" jni-signature="(Landroid/app/Activity;ILcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;)V" bridge="false" native="false" return="void" jni-return="V" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="activity" type="android.app.Activity" jni-type="Landroid/app/Activity;" />
+        <parameter name="requestCode" type="int" jni-type="I" />
+        <parameter name="builder" type="com.eov.watermeter.WaterMeterSDK.CameraScanBuilder" jni-type="Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" />
+      </method>
+      <field deprecated="not deprecated" final="true" name="EXTRA_AUTO_CLOSE_ON_RESULT" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;auto_close_on_result&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="EXTRA_IMAGE_MAX_HEIGHT" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;image_max_height&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="EXTRA_IMAGE_MAX_WIDTH" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;image_max_width&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="EXTRA_RESULT_CONFIDENCE" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;result_confidence&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="EXTRA_RESULT_IMAGE_PATH" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;result_image_path&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="EXTRA_RESULT_TEXT" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;result_text&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="EXTRA_SHOW_CLOSE_BUTTON" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;show_close_button&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="EXTRA_TITLE" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;title&quot;" visibility="public" volatile="false" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="WaterMeterSDK.1" static="false" visibility="" jni-signature="Lcom/eov/watermeter/WaterMeterSDK$1;">
+      <implements name="com.eov.watermeter.license.LicenseManager.LicenseCallback" name-generic-aware="com.eov.watermeter.license.LicenseManager.LicenseCallback" jni-type="Lcom/eov/watermeter/license/LicenseManager$LicenseCallback;" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="onError" jni-signature="(Ljava/lang/String;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="errorMessage" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onSuccess" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="WaterMeterSDK.CameraScanBuilder" static="true" visibility="public" jni-signature="Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;">
+      <constructor deprecated="not deprecated" final="false" name="WaterMeterSDK.CameraScanBuilder" jni-signature="()V" bridge="false" static="false" type="com.eov.watermeter.WaterMeterSDK.CameraScanBuilder" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="setAutoCloseOnResult" jni-signature="(Z)Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" bridge="false" native="false" return="com.eov.watermeter.WaterMeterSDK.CameraScanBuilder" jni-return="Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="autoClose" type="boolean" jni-type="Z" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setImageMaxHeight" jni-signature="(I)Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" bridge="false" native="false" return="com.eov.watermeter.WaterMeterSDK.CameraScanBuilder" jni-return="Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="maxHeight" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setImageMaxWidth" jni-signature="(I)Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" bridge="false" native="false" return="com.eov.watermeter.WaterMeterSDK.CameraScanBuilder" jni-return="Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="maxWidth" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setShowCloseButton" jni-signature="(Z)Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" bridge="false" native="false" return="com.eov.watermeter.WaterMeterSDK.CameraScanBuilder" jni-return="Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="show" type="boolean" jni-type="Z" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setTitle" jni-signature="(Ljava/lang/String;)Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" bridge="false" native="false" return="com.eov.watermeter.WaterMeterSDK.CameraScanBuilder" jni-return="Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="title" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="WaterMeterSDK.LicenseCallback" static="true" visibility="public" jni-signature="Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onError" jni-signature="(Ljava/lang/String;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="p0" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onSuccess" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+    </interface>
+  </package>
+  <package name="com.eov.watermeter.camera" jni-name="com/eov/watermeter/camera">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="Camera2Compatibility" static="false" visibility="public" jni-signature="Lcom/eov/watermeter/camera/Camera2Compatibility;">
+      <constructor deprecated="not deprecated" final="false" name="Camera2Compatibility" jni-signature="()V" bridge="false" static="false" type="com.eov.watermeter.camera.Camera2Compatibility" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCamera2Info" jni-signature="(Landroid/content/Context;)Ljava/lang/String;" bridge="false" native="false" return="java.lang.String" jni-return="Ljava/lang/String;" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isCamera2Supported" jni-signature="(Landroid/content/Context;)Z" bridge="false" native="false" return="boolean" jni-return="Z" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="CameraCallback" static="false" visibility="public" jni-signature="Lcom/eov/watermeter/camera/CameraCallback;">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onCameraClosed" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="true" deprecated="not deprecated" final="false" name="onCameraError" jni-signature="(Ljava/lang/String;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="p0" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onCameraOpened" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="true" deprecated="not deprecated" final="false" name="onPhotoCaptured" jni-signature="(Landroid/graphics/Bitmap;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="p0" type="android.graphics.Bitmap" jni-type="Landroid/graphics/Bitmap;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onPreviewFrame" jni-signature="(Landroid/graphics/Bitmap;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="bitmap" type="android.graphics.Bitmap" jni-type="Landroid/graphics/Bitmap;" />
+      </method>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="CameraConfig" static="false" visibility="public" jni-signature="Lcom/eov/watermeter/camera/CameraConfig;">
+      <constructor deprecated="not deprecated" final="false" name="CameraConfig" jni-signature="()V" bridge="false" static="false" type="com.eov.watermeter.camera.CameraConfig" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCameraFacing" jni-signature="()I" bridge="false" native="false" return="int" jni-return="I" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getFlashMode" jni-signature="()I" bridge="false" native="false" return="int" jni-return="I" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getImageHeight" jni-signature="()I" bridge="false" native="false" return="int" jni-return="I" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getImageQuality" jni-signature="()I" bridge="false" native="false" return="int" jni-return="I" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getImageWidth" jni-signature="()I" bridge="false" native="false" return="int" jni-return="I" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="isAutoExposure" jni-signature="()Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="isAutoFocus" jni-signature="()Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="setAutoExposure" jni-signature="(Z)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="enable" type="boolean" jni-type="Z" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setAutoFocus" jni-signature="(Z)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="enable" type="boolean" jni-type="Z" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setCameraFacing" jni-signature="(I)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="facing" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setFlashMode" jni-signature="(I)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="mode" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setImageQuality" jni-signature="(I)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="quality" type="int" jni-type="I" />
+      </method>
+      <field deprecated="not deprecated" final="true" name="FACING_BACK" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="FACING_FRONT" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="FLASH_AUTO" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="FLASH_OFF" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="FLASH_ON" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="FLASH_TORCH" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="QUALITY_HIGH" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="90" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="QUALITY_LOW" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="50" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="QUALITY_MAX" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="100" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="QUALITY_MEDIUM" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="75" visibility="public" volatile="false" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="CameraConfig.Builder" static="true" visibility="public" jni-signature="Lcom/eov/watermeter/camera/CameraConfig$Builder;">
+      <constructor deprecated="not deprecated" final="false" name="CameraConfig.Builder" jni-signature="()V" bridge="false" static="false" type="com.eov.watermeter.camera.CameraConfig.Builder" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="autoExposure" jni-signature="(Z)Lcom/eov/watermeter/camera/CameraConfig$Builder;" bridge="false" native="false" return="com.eov.watermeter.camera.CameraConfig.Builder" jni-return="Lcom/eov/watermeter/camera/CameraConfig$Builder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="enable" type="boolean" jni-type="Z" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="autoFocus" jni-signature="(Z)Lcom/eov/watermeter/camera/CameraConfig$Builder;" bridge="false" native="false" return="com.eov.watermeter.camera.CameraConfig.Builder" jni-return="Lcom/eov/watermeter/camera/CameraConfig$Builder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="enable" type="boolean" jni-type="Z" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="build" jni-signature="()Lcom/eov/watermeter/camera/CameraConfig;" bridge="false" native="false" return="com.eov.watermeter.camera.CameraConfig" jni-return="Lcom/eov/watermeter/camera/CameraConfig;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="facing" jni-signature="(I)Lcom/eov/watermeter/camera/CameraConfig$Builder;" bridge="false" native="false" return="com.eov.watermeter.camera.CameraConfig.Builder" jni-return="Lcom/eov/watermeter/camera/CameraConfig$Builder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="facing" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="flashMode" jni-signature="(I)Lcom/eov/watermeter/camera/CameraConfig$Builder;" bridge="false" native="false" return="com.eov.watermeter.camera.CameraConfig.Builder" jni-return="Lcom/eov/watermeter/camera/CameraConfig$Builder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="mode" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="imageQuality" jni-signature="(I)Lcom/eov/watermeter/camera/CameraConfig$Builder;" bridge="false" native="false" return="com.eov.watermeter.camera.CameraConfig.Builder" jni-return="Lcom/eov/watermeter/camera/CameraConfig$Builder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="quality" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="imageSize" jni-signature="(II)Lcom/eov/watermeter/camera/CameraConfig$Builder;" bridge="false" native="false" return="com.eov.watermeter.camera.CameraConfig.Builder" jni-return="Lcom/eov/watermeter/camera/CameraConfig$Builder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="width" type="int" jni-type="I" />
+        <parameter name="height" type="int" jni-type="I" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="CameraHelper" static="false" visibility="public" jni-signature="Lcom/eov/watermeter/camera/CameraHelper;">
+      <constructor deprecated="not deprecated" final="false" name="CameraHelper" jni-signature="(Landroid/content/Context;)V" bridge="false" static="false" type="com.eov.watermeter.camera.CameraHelper" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="CameraHelper" jni-signature="(Landroid/content/Context;Lcom/eov/watermeter/camera/CameraConfig;)V" bridge="false" static="false" type="com.eov.watermeter.camera.CameraHelper" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
+        <parameter name="config" type="com.eov.watermeter.camera.CameraConfig" jni-type="Lcom/eov/watermeter/camera/CameraConfig;" />
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="capturePhoto" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="closeCamera" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="focusAt" jni-signature="(FF)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="x" type="float" jni-type="F" />
+        <parameter name="y" type="float" jni-type="F" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getConfig" jni-signature="()Lcom/eov/watermeter/camera/CameraConfig;" bridge="false" native="false" return="com.eov.watermeter.camera.CameraConfig" jni-return="Lcom/eov/watermeter/camera/CameraConfig;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMaxZoom" jni-signature="()F" bridge="false" native="false" return="float" jni-return="F" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMinZoom" jni-signature="()F" bridge="false" native="false" return="float" jni-return="F" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSensorOrientation" jni-signature="()I" bridge="false" native="false" return="int" jni-return="I" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getUltraWideZoom" jni-signature="()F" bridge="false" native="false" return="float" jni-return="F" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="hasUltraWide" jni-signature="()Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="openCamera" jni-signature="(Landroid/view/TextureView;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="textureView" type="android.view.TextureView" jni-type="Landroid/view/TextureView;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setAutoExposure" jni-signature="(Z)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="enable" type="boolean" jni-type="Z" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setAutoFocus" jni-signature="(Z)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="enable" type="boolean" jni-type="Z" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setCallback" jni-signature="(Lcom/eov/watermeter/camera/CameraCallback;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="callback" type="com.eov.watermeter.camera.CameraCallback" jni-type="Lcom/eov/watermeter/camera/CameraCallback;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setExposureCompensation" jni-signature="(F)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="compensation" type="float" jni-type="F" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setFacing" jni-signature="(I)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="facing" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setFlash" jni-signature="(Z)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="on" type="boolean" jni-type="Z" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setFlashMode" jni-signature="(I)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="flashMode" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setImageQuality" jni-signature="(I)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="quality" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setZoom" jni-signature="(F)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="zoom" type="float" jni-type="F" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="switchCamera" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="toggleFlash" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="CameraHelper.Builder" static="true" visibility="public" jni-signature="Lcom/eov/watermeter/camera/CameraHelper$Builder;">
+      <constructor deprecated="not deprecated" final="false" name="CameraHelper.Builder" jni-signature="(Landroid/content/Context;)V" bridge="false" static="false" type="com.eov.watermeter.camera.CameraHelper.Builder" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="autoExposure" jni-signature="(Z)Lcom/eov/watermeter/camera/CameraHelper$Builder;" bridge="false" native="false" return="com.eov.watermeter.camera.CameraHelper.Builder" jni-return="Lcom/eov/watermeter/camera/CameraHelper$Builder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="enable" type="boolean" jni-type="Z" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="autoFocus" jni-signature="(Z)Lcom/eov/watermeter/camera/CameraHelper$Builder;" bridge="false" native="false" return="com.eov.watermeter.camera.CameraHelper.Builder" jni-return="Lcom/eov/watermeter/camera/CameraHelper$Builder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="enable" type="boolean" jni-type="Z" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="build" jni-signature="()Lcom/eov/watermeter/camera/CameraHelper;" bridge="false" native="false" return="com.eov.watermeter.camera.CameraHelper" jni-return="Lcom/eov/watermeter/camera/CameraHelper;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="callback" jni-signature="(Lcom/eov/watermeter/camera/CameraCallback;)Lcom/eov/watermeter/camera/CameraHelper$Builder;" bridge="false" native="false" return="com.eov.watermeter.camera.CameraHelper.Builder" jni-return="Lcom/eov/watermeter/camera/CameraHelper$Builder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="callback" type="com.eov.watermeter.camera.CameraCallback" jni-type="Lcom/eov/watermeter/camera/CameraCallback;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="facing" jni-signature="(I)Lcom/eov/watermeter/camera/CameraHelper$Builder;" bridge="false" native="false" return="com.eov.watermeter.camera.CameraHelper.Builder" jni-return="Lcom/eov/watermeter/camera/CameraHelper$Builder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="facing" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="flashMode" jni-signature="(I)Lcom/eov/watermeter/camera/CameraHelper$Builder;" bridge="false" native="false" return="com.eov.watermeter.camera.CameraHelper.Builder" jni-return="Lcom/eov/watermeter/camera/CameraHelper$Builder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="flashMode" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="imageQuality" jni-signature="(I)Lcom/eov/watermeter/camera/CameraHelper$Builder;" bridge="false" native="false" return="com.eov.watermeter.camera.CameraHelper.Builder" jni-return="Lcom/eov/watermeter/camera/CameraHelper$Builder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="quality" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="imageSize" jni-signature="(II)Lcom/eov/watermeter/camera/CameraHelper$Builder;" bridge="false" native="false" return="com.eov.watermeter.camera.CameraHelper.Builder" jni-return="Lcom/eov/watermeter/camera/CameraHelper$Builder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="width" type="int" jni-type="I" />
+        <parameter name="height" type="int" jni-type="I" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="CameraHelper.SimpleCameraCallback" static="true" visibility="private" jni-signature="Lcom/eov/watermeter/camera/CameraHelper$SimpleCameraCallback;">
+      <implements name="com.eov.watermeter.camera.CameraCallback" name-generic-aware="com.eov.watermeter.camera.CameraCallback" jni-type="Lcom/eov/watermeter/camera/CameraCallback;" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="onCameraClosed" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="onCameraError" jni-signature="(Ljava/lang/String;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="error" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onCameraOpened" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="onPhotoCaptured" jni-signature="(Landroid/graphics/Bitmap;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="bitmap" type="android.graphics.Bitmap" jni-type="Landroid/graphics/Bitmap;" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="CameraManager" static="false" visibility="public" jni-signature="Lcom/eov/watermeter/camera/CameraManager;">
+      <constructor deprecated="not deprecated" final="false" name="CameraManager" jni-signature="(Landroid/content/Context;Lcom/eov/watermeter/camera/CameraConfig;Lcom/eov/watermeter/camera/CameraCallback;)V" bridge="false" static="false" type="com.eov.watermeter.camera.CameraManager" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
+        <parameter name="config" type="com.eov.watermeter.camera.CameraConfig" jni-type="Lcom/eov/watermeter/camera/CameraConfig;" />
+        <parameter name="callback" type="com.eov.watermeter.camera.CameraCallback" jni-type="Lcom/eov/watermeter/camera/CameraCallback;" />
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="capturePhoto" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="closeCamera" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="focusAtPoint" jni-signature="(FF)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="x" type="float" jni-type="F" />
+        <parameter name="y" type="float" jni-type="F" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMaxZoom" jni-signature="()F" bridge="false" native="false" return="float" jni-return="F" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMinZoom" jni-signature="()F" bridge="false" native="false" return="float" jni-return="F" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSensorOrientation" jni-signature="()I" bridge="false" native="false" return="int" jni-return="I" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getUltraWideZoom" jni-signature="()F" bridge="false" native="false" return="float" jni-return="F" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="hasUltraWide" jni-signature="()Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="openCamera" jni-signature="(Landroid/view/TextureView;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="textureView" type="android.view.TextureView" jni-type="Landroid/view/TextureView;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setExposureCompensation" jni-signature="(F)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="compensation" type="float" jni-type="F" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setFlash" jni-signature="(Z)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="on" type="boolean" jni-type="Z" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setZoom" jni-signature="(F)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="zoom" type="float" jni-type="F" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="switchCamera" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="toggleFlash" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.hardware.camera2.CameraCaptureSession.StateCallback" extends-generic-aware="android.hardware.camera2.CameraCaptureSession.StateCallback" jni-extends="Landroid/hardware/camera2/CameraCaptureSession$StateCallback;" final="false" name="CameraManager.1" static="false" visibility="" jni-signature="Lcom/eov/watermeter/camera/CameraManager$1;">
+      <method abstract="false" deprecated="not deprecated" final="false" name="onConfigureFailed" jni-signature="(Landroid/hardware/camera2/CameraCaptureSession;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="session" type="android.hardware.camera2.CameraCaptureSession" jni-type="Landroid/hardware/camera2/CameraCaptureSession;" not-null="true" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onConfigured" jni-signature="(Landroid/hardware/camera2/CameraCaptureSession;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="session" type="android.hardware.camera2.CameraCaptureSession" jni-type="Landroid/hardware/camera2/CameraCaptureSession;" not-null="true" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="CameraManager.2" static="false" visibility="" jni-signature="Lcom/eov/watermeter/camera/CameraManager$2;">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable" jni-type="Ljava/lang/Runnable;" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.hardware.camera2.CameraDevice.StateCallback" extends-generic-aware="android.hardware.camera2.CameraDevice.StateCallback" jni-extends="Landroid/hardware/camera2/CameraDevice$StateCallback;" final="false" name="CameraManager.3" static="false" visibility="" jni-signature="Lcom/eov/watermeter/camera/CameraManager$3;">
+      <method abstract="false" deprecated="not deprecated" final="false" name="onDisconnected" jni-signature="(Landroid/hardware/camera2/CameraDevice;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="camera" type="android.hardware.camera2.CameraDevice" jni-type="Landroid/hardware/camera2/CameraDevice;" not-null="true" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onError" jni-signature="(Landroid/hardware/camera2/CameraDevice;I)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="camera" type="android.hardware.camera2.CameraDevice" jni-type="Landroid/hardware/camera2/CameraDevice;" not-null="true" />
+        <parameter name="error" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onOpened" jni-signature="(Landroid/hardware/camera2/CameraDevice;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="camera" type="android.hardware.camera2.CameraDevice" jni-type="Landroid/hardware/camera2/CameraDevice;" not-null="true" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.hardware.camera2.CameraCaptureSession.CaptureCallback" extends-generic-aware="android.hardware.camera2.CameraCaptureSession.CaptureCallback" jni-extends="Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;" final="false" name="CameraManager.4" static="false" visibility="" jni-signature="Lcom/eov/watermeter/camera/CameraManager$4;" />
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="CameraManager.5" static="false" visibility="" jni-signature="Lcom/eov/watermeter/camera/CameraManager$5;">
+      <implements name="android.media.ImageReader.OnImageAvailableListener" name-generic-aware="android.media.ImageReader.OnImageAvailableListener" jni-type="Landroid/media/ImageReader$OnImageAvailableListener;" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="onImageAvailable" jni-signature="(Landroid/media/ImageReader;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="reader" type="android.media.ImageReader" jni-type="Landroid/media/ImageReader;" />
+      </method>
+    </class>
+  </package>
+  <package name="com.eov.watermeter.license" jni-name="com/eov/watermeter/license">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="LicenseManager" static="false" visibility="public" jni-signature="Lcom/eov/watermeter/license/LicenseManager;">
+      <method abstract="false" deprecated="not deprecated" final="false" name="activate" jni-signature="(Landroid/content/Context;Ljava/lang/String;Lcom/eov/watermeter/license/LicenseManager$LicenseCallback;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
+        <parameter name="licenseKey" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="callback" type="com.eov.watermeter.license.LicenseManager.LicenseCallback" jni-type="Lcom/eov/watermeter/license/LicenseManager$LicenseCallback;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="activate" jni-signature="(Landroid/content/Context;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;Lcom/eov/watermeter/license/LicenseManager$LicenseCallback;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
+        <parameter name="licenseKey" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="metadataInfo" type="org.json.JSONObject" jni-type="Lorg/json/JSONObject;" />
+        <parameter name="deviceUser" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="callback" type="com.eov.watermeter.license.LicenseManager.LicenseCallback" jni-type="Lcom/eov/watermeter/license/LicenseManager$LicenseCallback;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="clear" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getBaseUrl" jni-signature="()Ljava/lang/String;" bridge="false" native="false" return="java.lang.String" jni-return="Ljava/lang/String;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getInstance" jni-signature="()Lcom/eov/watermeter/license/LicenseManager;" bridge="false" native="false" return="com.eov.watermeter.license.LicenseManager" jni-return="Lcom/eov/watermeter/license/LicenseManager;" static="true" synchronized="true" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPendingUsage" jni-signature="()I" bridge="false" native="false" return="int" jni-return="I" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getQuotaThreshold" jni-signature="()I" bridge="false" native="false" return="int" jni-return="I" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getStatus" jni-signature="()I" bridge="false" native="false" return="int" jni-return="I" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="incrementUsage" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="incrementUsage" jni-signature="(I)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="incrementAmount" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isBlockedDueToQuota" jni-signature="()Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="isValid" jni-signature="()Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="setSecretKey" jni-signature="(Ljava/lang/String;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="secretKey" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="syncNow" jni-signature="(Lcom/eov/watermeter/license/LicenseManager$LicenseCallback;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="callback" type="com.eov.watermeter.license.LicenseManager.LicenseCallback" jni-type="Lcom/eov/watermeter/license/LicenseManager$LicenseCallback;" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Exception" extends-generic-aware="java.lang.Exception" jni-extends="Ljava/lang/Exception;" final="false" name="LicenseManager.BlockedByServerException" static="true" visibility="private" jni-signature="Lcom/eov/watermeter/license/LicenseManager$BlockedByServerException;" />
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Exception" extends-generic-aware="java.lang.Exception" jni-extends="Ljava/lang/Exception;" final="false" name="LicenseManager.DeviceNotRegisteredException" static="true" visibility="private" jni-signature="Lcom/eov/watermeter/license/LicenseManager$DeviceNotRegisteredException;" />
+    <interface abstract="true" deprecated="not deprecated" final="false" name="LicenseManager.LicenseCallback" static="true" visibility="public" jni-signature="Lcom/eov/watermeter/license/LicenseManager$LicenseCallback;">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onError" jni-signature="(Ljava/lang/String;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="p0" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onSuccess" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Exception" extends-generic-aware="java.lang.Exception" jni-extends="Ljava/lang/Exception;" final="false" name="LicenseManager.QuotaExceededException" static="true" visibility="private" jni-signature="Lcom/eov/watermeter/license/LicenseManager$QuotaExceededException;" />
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="LicenseNative" static="false" visibility="public" jni-signature="Lcom/eov/watermeter/license/LicenseNative;">
+      <constructor deprecated="not deprecated" final="false" name="LicenseNative" jni-signature="()V" bridge="false" static="false" type="com.eov.watermeter.license.LicenseNative" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="clearLicense" jni-signature="()V" bridge="false" native="true" return="void" jni-return="V" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getBaseUrl" jni-signature="()Ljava/lang/String;" bridge="false" native="true" return="java.lang.String" jni-return="Ljava/lang/String;" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDefaultSecretKey" jni-signature="()Ljava/lang/String;" bridge="false" native="true" return="java.lang.String" jni-return="Ljava/lang/String;" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getLicenseStatus" jni-signature="()I" bridge="false" native="true" return="int" jni-return="I" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPendingUsage" jni-signature="()I" bridge="false" native="true" return="int" jni-return="I" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getQuotaThreshold" jni-signature="()I" bridge="false" native="true" return="int" jni-return="I" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSyncInterval" jni-signature="()J" bridge="false" native="true" return="long" jni-return="J" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="incrementUsage" jni-signature="(I)Z" bridge="false" native="true" return="boolean" jni-return="Z" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="p0" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="initLicense" jni-signature="(Ljava/lang/String;Ljava/lang/String;)Z" bridge="false" native="true" return="boolean" jni-return="Z" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="p0" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="p1" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isBlockedDueToQuota" jni-signature="()Z" bridge="false" native="true" return="boolean" jni-return="Z" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="isLicenseValid" jni-signature="()Z" bridge="false" native="true" return="boolean" jni-return="Z" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="resetPendingUsage" jni-signature="()V" bridge="false" native="true" return="void" jni-return="V" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="setBlockedDueToQuota" jni-signature="(Z)V" bridge="false" native="true" return="void" jni-return="V" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="p0" type="boolean" jni-type="Z" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setLastSyncTime" jni-signature="(J)V" bridge="false" native="true" return="void" jni-return="V" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="p0" type="long" jni-type="J" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setSecretKey" jni-signature="(Ljava/lang/String;)V" bridge="false" native="true" return="void" jni-return="V" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="p0" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="shouldSync" jni-signature="()Z" bridge="false" native="true" return="boolean" jni-return="Z" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="updateLastSync" jni-signature="()V" bridge="false" native="true" return="void" jni-return="V" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <field deprecated="not deprecated" final="true" name="STATUS_BLOCKED" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="5" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="STATUS_EXPIRED" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="STATUS_GRACE_PERIOD" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="STATUS_INVALID" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="4" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="STATUS_NOT_INITIALIZED" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="STATUS_QUOTA_EXCEEDED" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="6" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="STATUS_VALID" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false" />
+    </class>
+  </package>
+  <package name="com.eov.watermeter.model" jni-name="com/eov/watermeter/model">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="OcrResultModel" static="false" visibility="public" jni-signature="Lcom/eov/watermeter/model/OcrResultModel;">
+      <constructor deprecated="not deprecated" final="false" name="OcrResultModel" jni-signature="()V" bridge="false" static="false" type="com.eov.watermeter.model.OcrResultModel" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="addPoints" jni-signature="(II)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="x" type="int" jni-type="I" />
+        <parameter name="y" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addWordIndex" jni-signature="(I)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="index" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getClsConfidence" jni-signature="()F" bridge="false" native="false" return="float" jni-return="F" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getClsIdx" jni-signature="()F" bridge="false" native="false" return="float" jni-return="F" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getClsLabel" jni-signature="()Ljava/lang/String;" bridge="false" native="false" return="java.lang.String" jni-return="Ljava/lang/String;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDetConfidence" jni-signature="()F" bridge="false" native="false" return="float" jni-return="F" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDetIdx" jni-signature="()F" bridge="false" native="false" return="float" jni-return="F" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDetLabel" jni-signature="()Ljava/lang/String;" bridge="false" native="false" return="java.lang.String" jni-return="Ljava/lang/String;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPoints" jni-signature="()Ljava/util/List;" bridge="false" native="false" return="java.util.List&lt;android.graphics.Point&gt;" jni-return="Ljava/util/List&lt;Landroid/graphics/Point;&gt;;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getRecConfidence" jni-signature="()F" bridge="false" native="false" return="float" jni-return="F" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getRecLabel" jni-signature="()Ljava/lang/String;" bridge="false" native="false" return="java.lang.String" jni-return="Ljava/lang/String;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getWordIndex" jni-signature="()Ljava/util/List;" bridge="false" native="false" return="java.util.List&lt;java.lang.Integer&gt;" jni-return="Ljava/util/List&lt;Ljava/lang/Integer;&gt;;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="setClsConfidence" jni-signature="(F)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="confidence" type="float" jni-type="F" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setClsIdx" jni-signature="(F)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="idx" type="float" jni-type="F" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setClsLabel" jni-signature="(Ljava/lang/String;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="label" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setDetConfidence" jni-signature="(F)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="det_confidence" type="float" jni-type="F" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setDetIdx" jni-signature="(F)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="idx" type="float" jni-type="F" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setDetLabel" jni-signature="(Ljava/lang/String;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="det_label" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setRecConfidence" jni-signature="(F)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="rec_confidence" type="float" jni-type="F" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setRecLabel" jni-signature="(Ljava/lang/String;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="rec_label" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+    </class>
+  </package>
+  <package name="com.eov.watermeter.ocr" jni-name="com/eov/watermeter/ocr">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="OCRPredictorNative" static="false" visibility="public" jni-signature="Lcom/eov/watermeter/ocr/OCRPredictorNative;">
+      <constructor deprecated="not deprecated" final="false" name="OCRPredictorNative" jni-signature="(Lcom/eov/watermeter/ocr/OCRPredictorNative$Config;)V" bridge="false" static="false" type="com.eov.watermeter.ocr.OCRPredictorNative" synthetic="false" visibility="public">
+        <parameter name="config" type="com.eov.watermeter.ocr.OCRPredictorNative.Config" jni-type="Lcom/eov/watermeter/ocr/OCRPredictorNative$Config;" />
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="destroy" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="forward" jni-signature="(JLandroid/graphics/Bitmap;IIII)[F" bridge="false" native="true" return="float[]" jni-return="[F" static="false" synchronized="false" synthetic="false" visibility="protected">
+        <parameter name="p0" type="long" jni-type="J" />
+        <parameter name="p1" type="android.graphics.Bitmap" jni-type="Landroid/graphics/Bitmap;" />
+        <parameter name="p2" type="int" jni-type="I" />
+        <parameter name="p3" type="int" jni-type="I" />
+        <parameter name="p4" type="int" jni-type="I" />
+        <parameter name="p5" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="init" jni-signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;)J" bridge="false" native="true" return="long" jni-return="J" static="false" synchronized="false" synthetic="false" visibility="protected">
+        <parameter name="p0" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="p1" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="p2" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="p3" type="int" jni-type="I" />
+        <parameter name="p4" type="int" jni-type="I" />
+        <parameter name="p5" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="loadLibrary" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="true" synchronized="false" synthetic="false" visibility="public">
+        <exception name="RuntimeException" type="java.lang.RuntimeException" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="release" jni-signature="(J)V" bridge="false" native="true" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="protected">
+        <parameter name="p0" type="long" jni-type="J" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="runImage" jni-signature="(Landroid/graphics/Bitmap;IIII)Ljava/util/ArrayList;" bridge="false" native="false" return="java.util.ArrayList&lt;com.eov.watermeter.model.OcrResultModel&gt;" jni-return="Ljava/util/ArrayList&lt;Lcom/eov/watermeter/model/OcrResultModel;&gt;;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="originalImage" type="android.graphics.Bitmap" jni-type="Landroid/graphics/Bitmap;" />
+        <parameter name="max_size_len" type="int" jni-type="I" />
+        <parameter name="run_det" type="int" jni-type="I" />
+        <parameter name="run_cls" type="int" jni-type="I" />
+        <parameter name="run_rec" type="int" jni-type="I" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="OCRPredictorNative.Config" static="true" visibility="public" jni-signature="Lcom/eov/watermeter/ocr/OCRPredictorNative$Config;">
+      <constructor deprecated="not deprecated" final="false" name="OCRPredictorNative.Config" jni-signature="()V" bridge="false" static="false" type="com.eov.watermeter.ocr.OCRPredictorNative.Config" synthetic="false" visibility="public" />
+      <field deprecated="not deprecated" final="false" name="clsModelFilename" jni-signature="Ljava/lang/String;" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="cpuPower" jni-signature="Ljava/lang/String;" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="cpuThreadNum" jni-signature="I" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="detModelFilename" jni-signature="Ljava/lang/String;" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="recModelFilename" jni-signature="Ljava/lang/String;" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="useOpencl" jni-signature="I" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="Predictor" static="false" visibility="public" jni-signature="Lcom/eov/watermeter/ocr/Predictor;">
+      <constructor deprecated="not deprecated" final="false" name="Predictor" jni-signature="()V" bridge="false" static="false" type="com.eov.watermeter.ocr.Predictor" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="conf_det" jni-signature="()F" bridge="false" native="false" return="float" jni-return="F" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="conf_rec" jni-signature="()F" bridge="false" native="false" return="float" jni-return="F" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="cpuPowerMode" jni-signature="()Ljava/lang/String;" bridge="false" native="false" return="java.lang.String" jni-return="Ljava/lang/String;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="cpuThreadNum" jni-signature="()I" bridge="false" native="false" return="int" jni-return="I" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="det_label" jni-signature="()Ljava/lang/String;" bridge="false" native="false" return="java.lang.String" jni-return="Ljava/lang/String;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getLastDetectionResults" jni-signature="()Ljava/util/ArrayList;" bridge="false" native="false" return="java.util.ArrayList&lt;com.eov.watermeter.model.OcrResultModel&gt;" jni-return="Ljava/util/ArrayList&lt;Lcom/eov/watermeter/model/OcrResultModel;&gt;;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="inferenceTime" jni-signature="()F" bridge="false" native="false" return="float" jni-return="F" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="init" jni-signature="(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;)Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="appCtx" type="android.content.Context" jni-type="Landroid/content/Context;" />
+        <parameter name="modelPath" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="labelPath" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="useOpencl" type="int" jni-type="I" />
+        <parameter name="cpuThreadNum" type="int" jni-type="I" />
+        <parameter name="cpuPowerMode" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="init" jni-signature="(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;IF)Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="appCtx" type="android.content.Context" jni-type="Landroid/content/Context;" />
+        <parameter name="modelPath" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="labelPath" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="useOpencl" type="int" jni-type="I" />
+        <parameter name="cpuThreadNum" type="int" jni-type="I" />
+        <parameter name="cpuPowerMode" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="detLongSize" type="int" jni-type="I" />
+        <parameter name="scoreThreshold" type="float" jni-type="F" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="inputImage" jni-signature="()Landroid/graphics/Bitmap;" bridge="false" native="false" return="android.graphics.Bitmap" jni-return="Landroid/graphics/Bitmap;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="isLoaded" jni-signature="()Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="loadLabel" jni-signature="(Landroid/content/Context;Ljava/lang/String;)Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="protected">
+        <parameter name="appCtx" type="android.content.Context" jni-type="Landroid/content/Context;" />
+        <parameter name="labelPath" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="loadModel" jni-signature="(Landroid/content/Context;Ljava/lang/String;IILjava/lang/String;)Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="protected">
+        <parameter name="appCtx" type="android.content.Context" jni-type="Landroid/content/Context;" />
+        <parameter name="modelPath" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="useOpencl" type="int" jni-type="I" />
+        <parameter name="cpuThreadNum" type="int" jni-type="I" />
+        <parameter name="cpuPowerMode" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="modelName" jni-signature="()Ljava/lang/String;" bridge="false" native="false" return="java.lang.String" jni-return="Ljava/lang/String;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="modelPath" jni-signature="()Ljava/lang/String;" bridge="false" native="false" return="java.lang.String" jni-return="Ljava/lang/String;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="outputImage" jni-signature="()Landroid/graphics/Bitmap;" bridge="false" native="false" return="android.graphics.Bitmap" jni-return="Landroid/graphics/Bitmap;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="outputResult" jni-signature="()Ljava/lang/String;" bridge="false" native="false" return="java.lang.String" jni-return="Ljava/lang/String;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="postprocessTime" jni-signature="()F" bridge="false" native="false" return="float" jni-return="F" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="releaseModel" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="runModel" jni-signature="(III)Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="run_det" type="int" jni-type="I" />
+        <parameter name="run_cls" type="int" jni-type="I" />
+        <parameter name="run_rec" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setInputImage" jni-signature="(Landroid/graphics/Bitmap;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="image" type="android.graphics.Bitmap" jni-type="Landroid/graphics/Bitmap;" />
+      </method>
+      <field deprecated="not deprecated" final="false" name="conf_det" jni-signature="F" static="false" transient="false" type="float" type-generic-aware="float" visibility="protected" volatile="true" />
+      <field deprecated="not deprecated" final="false" name="conf_rec" jni-signature="F" static="false" transient="false" type="float" type-generic-aware="float" visibility="protected" volatile="true" />
+      <field deprecated="not deprecated" final="false" name="cpuPowerMode" jni-signature="Ljava/lang/String;" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="cpuThreadNum" jni-signature="I" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="detLongSize" jni-signature="I" static="false" transient="false" type="int" type-generic-aware="int" visibility="protected" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="det_label" jni-signature="Ljava/lang/String;" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="protected" volatile="true" />
+      <field deprecated="not deprecated" final="false" name="inferenceTime" jni-signature="F" static="false" transient="false" type="float" type-generic-aware="float" visibility="protected" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="inferIterNum" jni-signature="I" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="inputImage" jni-signature="Landroid/graphics/Bitmap;" static="false" transient="false" type="android.graphics.Bitmap" type-generic-aware="android.graphics.Bitmap" visibility="protected" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="isLoaded" jni-signature="Z" static="false" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="lastDetectionResults" jni-signature="Ljava/util/ArrayList;" static="false" transient="false" type="java.util.ArrayList" type-generic-aware="java.util.ArrayList&lt;com.eov.watermeter.model.OcrResultModel&gt;" visibility="protected" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="modelName" jni-signature="Ljava/lang/String;" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="modelPath" jni-signature="Ljava/lang/String;" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="outputImage" jni-signature="Landroid/graphics/Bitmap;" static="false" transient="false" type="android.graphics.Bitmap" type-generic-aware="android.graphics.Bitmap" visibility="protected" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="outputResult" jni-signature="Ljava/lang/String;" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="protected" volatile="true" />
+      <field deprecated="not deprecated" final="false" name="paddlePredictor" jni-signature="Lcom/eov/watermeter/ocr/OCRPredictorNative;" static="false" transient="false" type="com.eov.watermeter.ocr.OCRPredictorNative" type-generic-aware="com.eov.watermeter.ocr.OCRPredictorNative" visibility="protected" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="postprocessTime" jni-signature="F" static="false" transient="false" type="float" type-generic-aware="float" visibility="protected" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="scoreThreshold" jni-signature="F" static="false" transient="false" type="float" type-generic-aware="float" visibility="protected" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="warmupIterNum" jni-signature="I" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="wordLabels" jni-signature="Ljava/util/Vector;" static="false" transient="false" type="java.util.Vector" type-generic-aware="java.util.Vector&lt;java.lang.String&gt;" visibility="protected" volatile="false" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="PredictorManager" static="false" visibility="public" jni-signature="Lcom/eov/watermeter/ocr/PredictorManager;">
+      <method abstract="false" deprecated="not deprecated" final="false" name="getInstance" jni-signature="()Lcom/eov/watermeter/ocr/PredictorManager;" bridge="false" native="false" return="com.eov.watermeter.ocr.PredictorManager" jni-return="Lcom/eov/watermeter/ocr/PredictorManager;" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMemoryInfo" jni-signature="()Ljava/lang/String;" bridge="false" native="false" return="java.lang.String" jni-return="Ljava/lang/String;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPredictor" jni-signature="()Lcom/eov/watermeter/ocr/Predictor;" bridge="false" native="false" return="com.eov.watermeter.ocr.Predictor" jni-return="Lcom/eov/watermeter/ocr/Predictor;" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="init" jni-signature="(Landroid/content/Context;)Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="init" jni-signature="(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;)Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="true" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
+        <parameter name="modelDir" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="labelPath" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="useOpencl" type="int" jni-type="I" />
+        <parameter name="cpuThreadNum" type="int" jni-type="I" />
+        <parameter name="cpuPowerMode" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isInitialized" jni-signature="()Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="release" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="true" synthetic="false" visibility="public" />
+    </class>
+  </package>
+  <package name="com.eov.watermeter.training" jni-name="com/eov/watermeter/training">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="TrainingDataManager" static="false" visibility="public" jni-signature="Lcom/eov/watermeter/training/TrainingDataManager;">
+      <method abstract="false" deprecated="not deprecated" final="false" name="canUpload" jni-signature="()Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="forceUploadCachedImages" jni-signature="(Lcom/eov/watermeter/training/TrainingDataManager$ForceUploadCallback;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="callback" type="com.eov.watermeter.training.TrainingDataManager.ForceUploadCallback" jni-type="Lcom/eov/watermeter/training/TrainingDataManager$ForceUploadCallback;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCacheSizeBytes" jni-signature="()J" bridge="false" native="false" return="long" jni-return="J" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getInstance" jni-signature="()Lcom/eov/watermeter/training/TrainingDataManager;" bridge="false" native="false" return="com.eov.watermeter.training.TrainingDataManager" jni-return="Lcom/eov/watermeter/training/TrainingDataManager;" static="true" synchronized="true" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPendingCount" jni-signature="()I" bridge="false" native="false" return="int" jni-return="I" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="init" jni-signature="(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
+        <parameter name="deviceId" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="licenseKey" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isAllowMobileData" jni-signature="()Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="isEnabled" jni-signature="()Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="isOnWifi" jni-signature="()Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="queueIfLowConfidence" jni-signature="(Landroid/graphics/Bitmap;FLjava/lang/String;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="image" type="android.graphics.Bitmap" jni-type="Landroid/graphics/Bitmap;" />
+        <parameter name="confidence" type="float" jni-type="F" />
+        <parameter name="ocrResult" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setAllowMobileData" jni-signature="(Z)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="allow" type="boolean" jni-type="Z" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setEnabled" jni-signature="(Z)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="enabled" type="boolean" jni-type="Z" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setServerConfig" jni-signature="(ZF)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="enabled" type="boolean" jni-type="Z" />
+        <parameter name="confidenceThreshold" type="float" jni-type="F" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="uploadCachedImages" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="TrainingDataManager.ForceUploadCallback" static="true" visibility="public" jni-signature="Lcom/eov/watermeter/training/TrainingDataManager$ForceUploadCallback;">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onComplete" jni-signature="(ZII)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="p0" type="boolean" jni-type="Z" />
+        <parameter name="p1" type="int" jni-type="I" />
+        <parameter name="p2" type="int" jni-type="I" />
+      </method>
+    </interface>
+  </package>
+  <package name="com.eov.watermeter.ui" jni-name="com/eov/watermeter/ui">
+    <class abstract="false" deprecated="not deprecated" extends="androidx.appcompat.app.AppCompatActivity" extends-generic-aware="androidx.appcompat.app.AppCompatActivity" jni-extends="Landroidx/appcompat/app/AppCompatActivity;" final="false" name="CameraScanActivity" static="false" visibility="public" jni-signature="Lcom/eov/watermeter/ui/CameraScanActivity;">
+      <constructor deprecated="not deprecated" final="false" name="CameraScanActivity" jni-signature="()V" bridge="false" static="false" type="com.eov.watermeter.ui.CameraScanActivity" synthetic="false" visibility="public" />
+      <field deprecated="not deprecated" final="true" name="EXTRA_AUTO_CLOSE_ON_RESULT" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;auto_close_on_result&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="EXTRA_IMAGE_MAX_HEIGHT" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;image_max_height&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="EXTRA_IMAGE_MAX_WIDTH" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;image_max_width&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="EXTRA_RESULT_CONFIDENCE" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;result_confidence&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="EXTRA_RESULT_IMAGE_PATH" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;result_image_path&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="EXTRA_RESULT_TEXT" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;result_text&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="EXTRA_SHOW_CLOSE_BUTTON" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;show_close_button&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="EXTRA_TITLE" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;title&quot;" visibility="public" volatile="false" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="CameraScanActivity.1" static="false" visibility="" jni-signature="Lcom/eov/watermeter/ui/CameraScanActivity$1;">
+      <implements name="com.eov.watermeter.camera.CameraCallback" name-generic-aware="com.eov.watermeter.camera.CameraCallback" jni-type="Lcom/eov/watermeter/camera/CameraCallback;" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="onCameraClosed" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="onCameraError" jni-signature="(Ljava/lang/String;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="error" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onCameraOpened" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="onPhotoCaptured" jni-signature="(Landroid/graphics/Bitmap;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="bitmap" type="android.graphics.Bitmap" jni-type="Landroid/graphics/Bitmap;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onPreviewFrame" jni-signature="(Landroid/graphics/Bitmap;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="bitmap" type="android.graphics.Bitmap" jni-type="Landroid/graphics/Bitmap;" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="CameraScanActivity.2" static="false" visibility="" jni-signature="Lcom/eov/watermeter/ui/CameraScanActivity$2;">
+      <implements name="android.view.TextureView.SurfaceTextureListener" name-generic-aware="android.view.TextureView.SurfaceTextureListener" jni-type="Landroid/view/TextureView$SurfaceTextureListener;" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="onSurfaceTextureAvailable" jni-signature="(Landroid/graphics/SurfaceTexture;II)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="surface" type="android.graphics.SurfaceTexture" jni-type="Landroid/graphics/SurfaceTexture;" />
+        <parameter name="width" type="int" jni-type="I" />
+        <parameter name="height" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onSurfaceTextureDestroyed" jni-signature="(Landroid/graphics/SurfaceTexture;)Z" bridge="false" native="false" return="boolean" jni-return="Z" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="surface" type="android.graphics.SurfaceTexture" jni-type="Landroid/graphics/SurfaceTexture;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onSurfaceTextureSizeChanged" jni-signature="(Landroid/graphics/SurfaceTexture;II)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="surface" type="android.graphics.SurfaceTexture" jni-type="Landroid/graphics/SurfaceTexture;" />
+        <parameter name="width" type="int" jni-type="I" />
+        <parameter name="height" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onSurfaceTextureUpdated" jni-signature="(Landroid/graphics/SurfaceTexture;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="surface" type="android.graphics.SurfaceTexture" jni-type="Landroid/graphics/SurfaceTexture;" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.view.ScaleGestureDetector.SimpleOnScaleGestureListener" extends-generic-aware="android.view.ScaleGestureDetector.SimpleOnScaleGestureListener" jni-extends="Landroid/view/ScaleGestureDetector$SimpleOnScaleGestureListener;" final="false" name="CameraScanActivity.3" static="false" visibility="" jni-signature="Lcom/eov/watermeter/ui/CameraScanActivity$3;" />
+    <class abstract="false" deprecated="not deprecated" extends="androidx.appcompat.app.AppCompatActivity" extends-generic-aware="androidx.appcompat.app.AppCompatActivity" jni-extends="Landroidx/appcompat/app/AppCompatActivity;" final="false" name="CameraSettingsActivity" static="false" visibility="public" jni-signature="Lcom/eov/watermeter/ui/CameraSettingsActivity;">
+      <constructor deprecated="not deprecated" final="false" name="CameraSettingsActivity" jni-signature="()V" bridge="false" static="false" type="com.eov.watermeter.ui.CameraSettingsActivity" synthetic="false" visibility="public" />
+      <field deprecated="not deprecated" final="true" name="DEFAULT_ALLOW_MOBILE_DATA" jni-signature="Z" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="false" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="DEFAULT_AUTO_CAPTURE" jni-signature="Z" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="true" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="DEFAULT_AUTO_EXPOSURE" jni-signature="Z" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="true" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="DEFAULT_AUTO_FOCUS" jni-signature="Z" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="true" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="DEFAULT_AUTO_ZOOM" jni-signature="Z" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="true" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="DEFAULT_CONFIDENCE_THRESHOLD" jni-signature="F" static="true" transient="false" type="float" type-generic-aware="float" value="0.850000024" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="DEFAULT_DETECTION_INTERVAL" jni-signature="I" static="true" transient="false" type="int" type-generic-aware="int" value="600" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="DEFAULT_EXPOSURE_COMPENSATION" jni-signature="F" static="true" transient="false" type="float" type-generic-aware="float" value="0" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="DEFAULT_FLASH_ON" jni-signature="Z" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="false" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="DEFAULT_IOU_THRESHOLD" jni-signature="F" static="true" transient="false" type="float" type-generic-aware="float" value="0.600000024" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="DEFAULT_REALTIME_DETECTION" jni-signature="Z" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="true" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="DEFAULT_STRICT_AUTO_CAPTURE" jni-signature="Z" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="true" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="DEFAULT_TRAINING_UPLOAD" jni-signature="Z" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="false" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="PREF_ALLOW_MOBILE_DATA" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;allow_mobile_data&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="PREF_AUTO_CAPTURE" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;auto_capture_enabled&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="PREF_AUTO_EXPOSURE" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;auto_exposure_enabled&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="PREF_AUTO_FOCUS" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;auto_focus_enabled&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="PREF_AUTO_ZOOM" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;auto_zoom_enabled&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="PREF_CONFIDENCE_THRESHOLD" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;confidence_threshold&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="PREF_DETECTION_INTERVAL" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;detection_interval_ms&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="PREF_EXPOSURE_COMPENSATION" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;exposure_compensation&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="PREF_FLASH_ON" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;flash_on&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="PREF_IOU_THRESHOLD" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;iou_threshold&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="PREF_REALTIME_DETECTION" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;realtime_detection_enabled&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="PREF_STRICT_AUTO_CAPTURE" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;strict_auto_capture_enabled&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="PREF_TRAINING_UPLOAD" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;training_upload_enabled&quot;" visibility="public" volatile="false" />
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="CameraSettingsActivity.1" static="false" visibility="" jni-signature="Lcom/eov/watermeter/ui/CameraSettingsActivity$1;">
+      <implements name="android.widget.SeekBar.OnSeekBarChangeListener" name-generic-aware="android.widget.SeekBar.OnSeekBarChangeListener" jni-type="Landroid/widget/SeekBar$OnSeekBarChangeListener;" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="onProgressChanged" jni-signature="(Landroid/widget/SeekBar;IZ)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="seekBar" type="android.widget.SeekBar" jni-type="Landroid/widget/SeekBar;" />
+        <parameter name="progress" type="int" jni-type="I" />
+        <parameter name="fromUser" type="boolean" jni-type="Z" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onStartTrackingTouch" jni-signature="(Landroid/widget/SeekBar;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="seekBar" type="android.widget.SeekBar" jni-type="Landroid/widget/SeekBar;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onStopTrackingTouch" jni-signature="(Landroid/widget/SeekBar;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="seekBar" type="android.widget.SeekBar" jni-type="Landroid/widget/SeekBar;" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="CameraSettingsActivity.2" static="false" visibility="" jni-signature="Lcom/eov/watermeter/ui/CameraSettingsActivity$2;">
+      <implements name="android.widget.SeekBar.OnSeekBarChangeListener" name-generic-aware="android.widget.SeekBar.OnSeekBarChangeListener" jni-type="Landroid/widget/SeekBar$OnSeekBarChangeListener;" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="onProgressChanged" jni-signature="(Landroid/widget/SeekBar;IZ)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="seekBar" type="android.widget.SeekBar" jni-type="Landroid/widget/SeekBar;" />
+        <parameter name="progress" type="int" jni-type="I" />
+        <parameter name="fromUser" type="boolean" jni-type="Z" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onStartTrackingTouch" jni-signature="(Landroid/widget/SeekBar;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="seekBar" type="android.widget.SeekBar" jni-type="Landroid/widget/SeekBar;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onStopTrackingTouch" jni-signature="(Landroid/widget/SeekBar;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="seekBar" type="android.widget.SeekBar" jni-type="Landroid/widget/SeekBar;" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="CameraSettingsActivity.3" static="false" visibility="" jni-signature="Lcom/eov/watermeter/ui/CameraSettingsActivity$3;">
+      <implements name="android.widget.SeekBar.OnSeekBarChangeListener" name-generic-aware="android.widget.SeekBar.OnSeekBarChangeListener" jni-type="Landroid/widget/SeekBar$OnSeekBarChangeListener;" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="onProgressChanged" jni-signature="(Landroid/widget/SeekBar;IZ)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="seekBar" type="android.widget.SeekBar" jni-type="Landroid/widget/SeekBar;" />
+        <parameter name="progress" type="int" jni-type="I" />
+        <parameter name="fromUser" type="boolean" jni-type="Z" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onStartTrackingTouch" jni-signature="(Landroid/widget/SeekBar;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="seekBar" type="android.widget.SeekBar" jni-type="Landroid/widget/SeekBar;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onStopTrackingTouch" jni-signature="(Landroid/widget/SeekBar;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="seekBar" type="android.widget.SeekBar" jni-type="Landroid/widget/SeekBar;" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="CameraSettingsActivity.4" static="false" visibility="" jni-signature="Lcom/eov/watermeter/ui/CameraSettingsActivity$4;">
+      <implements name="android.widget.SeekBar.OnSeekBarChangeListener" name-generic-aware="android.widget.SeekBar.OnSeekBarChangeListener" jni-type="Landroid/widget/SeekBar$OnSeekBarChangeListener;" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="onProgressChanged" jni-signature="(Landroid/widget/SeekBar;IZ)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="seekBar" type="android.widget.SeekBar" jni-type="Landroid/widget/SeekBar;" />
+        <parameter name="progress" type="int" jni-type="I" />
+        <parameter name="fromUser" type="boolean" jni-type="Z" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onStartTrackingTouch" jni-signature="(Landroid/widget/SeekBar;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="seekBar" type="android.widget.SeekBar" jni-type="Landroid/widget/SeekBar;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onStopTrackingTouch" jni-signature="(Landroid/widget/SeekBar;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="seekBar" type="android.widget.SeekBar" jni-type="Landroid/widget/SeekBar;" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="CameraSettingsActivity.5" static="false" visibility="" jni-signature="Lcom/eov/watermeter/ui/CameraSettingsActivity$5;">
+      <implements name="com.eov.watermeter.license.LicenseManager.LicenseCallback" name-generic-aware="com.eov.watermeter.license.LicenseManager.LicenseCallback" jni-type="Lcom/eov/watermeter/license/LicenseManager$LicenseCallback;" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="onError" jni-signature="(Ljava/lang/String;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="error" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onSuccess" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+    </class>
+  </package>
+  <package name="com.eov.watermeter.util" jni-name="com/eov/watermeter/util">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="Utils" static="false" visibility="public" jni-signature="Lcom/eov/watermeter/util/Utils;">
+      <constructor deprecated="not deprecated" final="false" name="Utils" jni-signature="()V" bridge="false" static="false" type="com.eov.watermeter.util.Utils" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="copyDirectoryFromAssets" jni-signature="(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V" bridge="false" native="false" return="void" jni-return="V" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="appCtx" type="android.content.Context" jni-type="Landroid/content/Context;" />
+        <parameter name="srcDir" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="dstDir" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="copyFileFromAssets" jni-signature="(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V" bridge="false" native="false" return="void" jni-return="V" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="appCtx" type="android.content.Context" jni-type="Landroid/content/Context;" />
+        <parameter name="srcPath" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="dstPath" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSDCardDirectory" jni-signature="()Ljava/lang/String;" bridge="false" native="false" return="java.lang.String" jni-return="Ljava/lang/String;" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="isSupportedNPU" jni-signature="()Z" bridge="false" native="false" return="boolean" jni-return="Z" static="true" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="parseFloatsFromString" jni-signature="(Ljava/lang/String;Ljava/lang/String;)[F" bridge="false" native="false" return="float[]" jni-return="[F" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="string" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="delimiter" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="parseLongsFromString" jni-signature="(Ljava/lang/String;Ljava/lang/String;)[J" bridge="false" native="false" return="long[]" jni-return="[J" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="string" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="delimiter" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="resizeWithStep" jni-signature="(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;" bridge="false" native="false" return="android.graphics.Bitmap" jni-return="Landroid/graphics/Bitmap;" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="bitmap" type="android.graphics.Bitmap" jni-type="Landroid/graphics/Bitmap;" />
+        <parameter name="maxLength" type="int" jni-type="I" />
+        <parameter name="step" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="rotateBitmap" jni-signature="(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;" bridge="false" native="false" return="android.graphics.Bitmap" jni-return="Landroid/graphics/Bitmap;" static="true" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="bitmap" type="android.graphics.Bitmap" jni-type="Landroid/graphics/Bitmap;" />
+        <parameter name="orientation" type="int" jni-type="I" />
+      </method>
+    </class>
+  </package>
+  <package name="com.eov.watermeter.views" jni-name="com/eov/watermeter/views">
+    <class abstract="false" deprecated="not deprecated" extends="android.view.View" extends-generic-aware="android.view.View" jni-extends="Landroid/view/View;" final="false" name="FocusIndicatorView" static="false" visibility="public" jni-signature="Lcom/eov/watermeter/views/FocusIndicatorView;">
+      <constructor deprecated="not deprecated" final="false" name="FocusIndicatorView" jni-signature="(Landroid/content/Context;)V" bridge="false" static="false" type="com.eov.watermeter.views.FocusIndicatorView" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="FocusIndicatorView" jni-signature="(Landroid/content/Context;Landroid/util/AttributeSet;)V" bridge="false" static="false" type="com.eov.watermeter.views.FocusIndicatorView" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
+        <parameter name="attrs" type="android.util.AttributeSet" jni-type="Landroid/util/AttributeSet;" />
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="FocusIndicatorView" jni-signature="(Landroid/content/Context;Landroid/util/AttributeSet;I)V" bridge="false" static="false" type="com.eov.watermeter.views.FocusIndicatorView" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
+        <parameter name="attrs" type="android.util.AttributeSet" jni-type="Landroid/util/AttributeSet;" />
+        <parameter name="defStyleAttr" type="int" jni-type="I" />
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="hideFocusIndicator" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="showFocusIndicator" jni-signature="(FF)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="x" type="float" jni-type="F" />
+        <parameter name="y" type="float" jni-type="F" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.animation.AnimatorListenerAdapter" extends-generic-aware="android.animation.AnimatorListenerAdapter" jni-extends="Landroid/animation/AnimatorListenerAdapter;" final="false" name="FocusIndicatorView.1" static="false" visibility="" jni-signature="Lcom/eov/watermeter/views/FocusIndicatorView$1;" />
+    <class abstract="false" deprecated="not deprecated" extends="android.animation.AnimatorListenerAdapter" extends-generic-aware="android.animation.AnimatorListenerAdapter" jni-extends="Landroid/animation/AnimatorListenerAdapter;" final="false" name="FocusIndicatorView.2" static="false" visibility="" jni-signature="Lcom/eov/watermeter/views/FocusIndicatorView$2;" />
+    <class abstract="false" deprecated="not deprecated" extends="android.view.View" extends-generic-aware="android.view.View" jni-extends="Landroid/view/View;" final="false" name="OBBOverlayView" static="false" visibility="public" jni-signature="Lcom/eov/watermeter/views/OBBOverlayView;">
+      <constructor deprecated="not deprecated" final="false" name="OBBOverlayView" jni-signature="(Landroid/content/Context;)V" bridge="false" static="false" type="com.eov.watermeter.views.OBBOverlayView" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="OBBOverlayView" jni-signature="(Landroid/content/Context;Landroid/util/AttributeSet;)V" bridge="false" static="false" type="com.eov.watermeter.views.OBBOverlayView" synthetic="false" visibility="public">
+        <parameter name="context" type="android.content.Context" jni-type="Landroid/content/Context;" />
+        <parameter name="attrs" type="android.util.AttributeSet" jni-type="Landroid/util/AttributeSet;" />
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="clearDetections" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="setPreviewDimensions" jni-signature="(II)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="width" type="int" jni-type="I" />
+        <parameter name="height" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setRotation" jni-signature="(I)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="degrees" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setSourceDimensions" jni-signature="(II)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="width" type="int" jni-type="I" />
+        <parameter name="height" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="updateDetections" jni-signature="(Ljava/util/List;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="newDetections" type="java.util.List&lt;com.eov.watermeter.views.OBBOverlayView.OBBDetection&gt;" jni-type="Ljava/util/List&lt;Lcom/eov/watermeter/views/OBBOverlayView$OBBDetection;&gt;;" />
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="false" name="OBBOverlayView.OBBDetection" static="true" visibility="public" jni-signature="Lcom/eov/watermeter/views/OBBOverlayView$OBBDetection;">
+      <constructor deprecated="not deprecated" final="false" name="OBBOverlayView.OBBDetection" jni-signature="([FFLjava/lang/String;I)V" bridge="false" static="false" type="com.eov.watermeter.views.OBBOverlayView.OBBDetection" synthetic="false" visibility="public">
+        <parameter name="corners" type="float[]" jni-type="[F" />
+        <parameter name="confidence" type="float" jni-type="F" />
+        <parameter name="label" type="java.lang.String" jni-type="Ljava/lang/String;" />
+        <parameter name="classIndex" type="int" jni-type="I" />
+      </constructor>
+      <field deprecated="not deprecated" final="false" name="classIndex" jni-signature="I" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="confidence" jni-signature="F" static="false" transient="false" type="float" type-generic-aware="float" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="corners" jni-signature="[F" static="false" transient="false" type="float[]" type-generic-aware="float[]" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="false" name="label" jni-signature="Ljava/lang/String;" static="false" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" visibility="public" volatile="false" />
+    </class>
+  </package>
+</api>

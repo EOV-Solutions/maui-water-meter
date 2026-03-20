@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);ANDROID_1;ANDROID_2;ANDROID_3;ANDROID_4;ANDROID_5;ANDROID_6;ANDROID_7;ANDROID_8;ANDROID_9;ANDROID_10;ANDROID_11;ANDROID_12;ANDROID_13;ANDROID_14;ANDROID_15;ANDROID_16;ANDROID_17;ANDROID_18;ANDROID_19;ANDROID_20;ANDROID_21;ANDROID_22;ANDROID_23;ANDROID_24;ANDROID_25;ANDROID_26;ANDROID_27;ANDROID_28;ANDROID_29;ANDROID_30;ANDROID_31;ANDROID_32;ANDROID_33;ANDROID_34;ANDROID_35</DefineConstants>
+  </PropertyGroup>
+  <!-- Classes -->
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Eov.Watermeter.BuildConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Eov.Watermeter.Camera.Camera2Compatibility.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Eov.Watermeter.Camera.CameraConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Eov.Watermeter.Camera.CameraHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Eov.Watermeter.Camera.CameraManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Eov.Watermeter.Camera.ICameraCallback.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Eov.Watermeter.License.LicenseManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Eov.Watermeter.License.LicenseNative.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Eov.Watermeter.Model.OcrResultModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Eov.Watermeter.Ocr.OCRPredictorNative.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Eov.Watermeter.Ocr.Predictor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Eov.Watermeter.Ocr.PredictorManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Eov.Watermeter.Training.TrainingDataManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Eov.Watermeter.UI.CameraScanActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Eov.Watermeter.UI.CameraSettingsActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Eov.Watermeter.Util.Utils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Eov.Watermeter.Views.FocusIndicatorView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Eov.Watermeter.Views.OBBOverlayView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Com.Eov.Watermeter.WaterMeterSDK.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Java.Interop.__TypeRegistrations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)__NamespaceMapping__.cs" />
+  </ItemGroup>
+  <!-- Enums -->
+  <ItemGroup />
+</Project>

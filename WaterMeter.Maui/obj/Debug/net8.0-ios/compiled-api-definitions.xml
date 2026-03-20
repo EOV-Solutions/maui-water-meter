@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>compiled-api-definitions</name>
+    </assembly>
+    <members>
+        <member name="T:WaterMeter.Maui.Platforms.iOS.WaterMeterSDKBinding">
+            <summary>
+            C# binding for WaterMeterSDK.framework native iOS classes.
+            Maps Swift classes (with mangled ObjC runtime names) to managed types.
+            </summary>
+        </member>
+    </members>
+</doc>

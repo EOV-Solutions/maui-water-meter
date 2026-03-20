@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
+    <!-- Skip Xcode version check (installed: 26.1.1, required: 26.2) -->
+    <ValidateXcodeVersion>false</ValidateXcodeVersion>
+  </PropertyGroup>
+</Project>
