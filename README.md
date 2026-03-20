@@ -11,7 +11,6 @@
 ## ✨ Tính năng
 
 - 📷 Xem trước camera thời gian thực với lớp phủ AI
-- 🤖 Nhận diện số đồng hồ bằng AI (YOLOv8 + PaddleOCR)
 - 🎯 Tự động phát hiện với ngưỡng độ tin cậy
 - ⚡ Tự động chụp khi căn chỉnh đúng
 - 🔦 Hỗ trợ đèn flash
