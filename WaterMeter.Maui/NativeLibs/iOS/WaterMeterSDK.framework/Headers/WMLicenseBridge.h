@@ -18,7 +18,8 @@ typedef NS_ENUM(NSInteger, WMLicenseStatus) {
     WMLicenseStatusGracePeriod = 3,
     WMLicenseStatusInvalid = 4,
     WMLicenseStatusBlocked = 5,
-    WMLicenseStatusQuotaExceeded = 6
+    WMLicenseStatusQuotaExceeded = 6,
+    WMLicenseStatusTrial = 7
 };
 
 /// Objective-C bridge for C++ license management
@@ -58,10 +59,9 @@ typedef NS_ENUM(NSInteger, WMLicenseStatus) {
 /// @return The API base URL
 + (NSString *)getBaseUrl;
 
-/// Get the default secret key for JWT verification from native layer
-/// This key is hardcoded in native for security
-/// @return The default secret key
-+ (NSString *)getDefaultSecretKey;
+/// Set the default secret key for JWT verification directly in native layer
+/// The key never leaves C++ - it is decoded and stored internally
++ (void)useDefaultSecretKey;
 
 #pragma mark - Quota Management
 
@@ -106,6 +106,25 @@ typedef NS_ENUM(NSInteger, WMLicenseStatus) {
 /// Set last sync time (called on startup with stored value from UserDefaults)
 /// @param timeMs Last sync timestamp in milliseconds
 + (void)setLastSyncTime:(int64_t)timeMs;
+
+#pragma mark - Trial Mode Management
+
+/// Enable trial mode with specified remaining activation attempts.
+/// In trial mode, isLicenseValid returns YES so OCR works without limits.
+/// @param remaining Number of trial activations remaining
++ (void)enableTrialMode:(int)remaining;
+
+/// Check if SDK is currently in trial mode.
+/// @return YES if in trial mode
++ (BOOL)isInTrialMode;
+
+/// Get remaining trial activation attempts.
+/// @return number of remaining trial activations
++ (int)getTrialActivationsRemaining;
+
+/// Reset trial mode (called on successful activation).
+/// Resets counter to MAX_TRIAL_ACTIVATIONS for future use.
++ (void)resetTrialMode;
 
 @end
 

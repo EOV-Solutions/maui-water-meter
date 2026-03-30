@@ -106,6 +106,7 @@
 /Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-android/WaterMeter.Maui.AssemblyInfoInputs.cache
 /Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-android/WaterMeter.Maui.AssemblyInfo.cs
 /Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-android/WaterMeter.Maui.csproj.CoreCompileInputs.cache
+/Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-android/WaterMeter.Maui.sourcelink.json
 /Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-android/WaterMeter.Maui.dll
 /Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-android/refint/WaterMeter.Maui.dll
 /Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-android/WaterMeter.Maui.pdb

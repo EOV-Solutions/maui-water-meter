@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute(("Water Meter OCR scanning SDK for .NET MAUI. Provides camera-based scanning, image" +
     " recognition, license management for water meter reading using AI."))]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12738292a5621a8026b2c48b325ad487eb6a6443")]
 [assembly: System.Reflection.AssemblyProductAttribute("WaterMeter.Maui")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WaterMeter.Maui")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

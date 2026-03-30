@@ -43,6 +43,12 @@ import _SwiftConcurrencyShims
   }
   final public func incrementUsage(_ amount: Swift.Int = 1)
   final public func clearLicense()
+  final public var isTrialMode: Swift.Bool {
+    get
+  }
+  final public var trialActivationsRemaining: Swift.Int {
+    get
+  }
   final public func recognize(image: UIKit.UIImage) throws -> WaterMeterSDK.WMOCRScanResult
   @available(iOS 13.0, *)
   final public func recognize(image: UIKit.UIImage) async throws -> WaterMeterSDK.WMOCRScanResult
@@ -716,6 +722,12 @@ public typealias WMLicenseCallback = (WaterMeterSDK.WMLicenseResult) -> Swift.Vo
     get
   }
   final public func syncNow(completion: @escaping WaterMeterSDK.WMLicenseCallback)
+  final public var isTrialMode: Swift.Bool {
+    get
+  }
+  final public var trialActivationsRemaining: Swift.Int {
+    get
+  }
   @objc deinit
 }
 @_hasMissingDesignatedInitializers final public class WMTrainingDataManager {
