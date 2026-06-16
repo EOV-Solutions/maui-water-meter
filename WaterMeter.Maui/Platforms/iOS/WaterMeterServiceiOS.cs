@@ -17,7 +17,7 @@ public class WaterMeterServiceiOS : NSObject, IWaterMeterService, IWMCameraScann
 
     // ========== License Management ==========
 
-    public Task<LicenseResult> InitializeLicenseAsync(string licenseKey, Dictionary<string, object>? metadataInfo = null, string? deviceUser = null)
+    public Task<LicenseResult> InitializeLicenseAsync(string licenseKey, Dictionary<string, object>? metadataInfo = null, string? deviceUser = null, string? maToChuc = null)
     {
         var tcs = new TaskCompletionSource<LicenseResult>();
 
@@ -33,6 +33,7 @@ public class WaterMeterServiceiOS : NSObject, IWaterMeterService, IWMCameraScann
             licenseKey,
             metadata,
             deviceUser,
+            maToChuc,
             (success, errorMessage) =>
             {
                 _licenseInitialized = success;

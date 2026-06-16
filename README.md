@@ -172,8 +172,8 @@ else
     Console.WriteLine($"✗ License error: {result.Message}");
 }
 
-// Cách 2: Với metadata và device user (để theo dõi trên admin)
-// Lưu ý: metadataInfo và deviceUser là optional, có thể truyền 1 trong 2, cả 2, hoặc không truyền
+// Cách 2: Với metadata, device user và mã tổ chức (để theo dõi trên admin)
+// Lưu ý: metadataInfo, deviceUser và maToChuc là optional, có thể truyền 1 trong số đó, tất cả, hoặc không truyền
 var result = await WaterMeterSdk.InitializeLicenseAsync(
     "YOUR_LICENSE_KEY",
     metadataInfo: new Dictionary<string, object>
@@ -182,7 +182,8 @@ var result = await WaterMeterSdk.InitializeLicenseAsync(
         { "customerId", "12345" },
         { "department", "Phòng Thu Ngân" }
     },
-    deviceUser: "nhanvien@congty.com"
+    deviceUser: "nhanvien@congty.com",
+    maToChuc: "MA_TO_CHUC_123"
 );
 ```
 
@@ -373,7 +374,7 @@ Console.WriteLine($"Chỉ số: {result1.Text}, Tin cậy: {result1.Confidence}"
 
 ## 📖 API
 
-### `WaterMeterSdk.InitializeLicenseAsync(key, metadataInfo?, deviceUser?)`
+### `WaterMeterSdk.InitializeLicenseAsync(key, metadataInfo?, deviceUser?, maToChuc?)`
 
 **⚠️ BẮT BUỘC** - Khởi tạo SDK với license key. Phải gọi trước khi sử dụng các tính năng khác.
 
@@ -381,6 +382,7 @@ Console.WriteLine($"Chỉ số: {result1.Text}, Tin cậy: {result1.Confidence}"
 - `key` (string, bắt buộc) - License key từ backend
 - `metadataInfo` (Dictionary<string, object>?, tùy chọn) - Metadata gửi lên server để admin theo dõi
 - `deviceUser` (string?, tùy chọn) - Email/ID người dùng thiết bị
+- `maToChuc` (string?, tùy chọn) - Mã tổ chức của khách hàng
 
 **Trả về:** `Task<LicenseResult>`
 
@@ -388,7 +390,7 @@ Console.WriteLine($"Chỉ số: {result1.Text}, Tin cậy: {result1.Confidence}"
 // Chỉ với license key
 var result = await WaterMeterSdk.InitializeLicenseAsync("YOUR_LICENSE_KEY");
 
-// Với metadata và device user
+// Với metadata, device user và mã tổ chức
 var result = await WaterMeterSdk.InitializeLicenseAsync(
     "YOUR_LICENSE_KEY",
     metadataInfo: new Dictionary<string, object>
@@ -396,7 +398,8 @@ var result = await WaterMeterSdk.InitializeLicenseAsync(
         { "location", "Chi nhánh Quận 1" },
         { "customerId", "12345" }
     },
-    deviceUser: "nhanvien@congty.com"
+    deviceUser: "nhanvien@congty.com",
+    maToChuc: "MA_TO_CHUC_123"
 );
 ```
 

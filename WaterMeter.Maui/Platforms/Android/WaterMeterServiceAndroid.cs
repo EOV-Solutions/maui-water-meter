@@ -45,7 +45,7 @@ public class WaterMeterServiceAndroid : IWaterMeterService
 
     // ========== License Management ==========
 
-    public Task<LicenseResult> InitializeLicenseAsync(string licenseKey, Dictionary<string, object>? metadataInfo = null, string? deviceUser = null)
+    public Task<LicenseResult> InitializeLicenseAsync(string licenseKey, Dictionary<string, object>? metadataInfo = null, string? deviceUser = null, string? maToChuc = null)
     {
         var tcs = new TaskCompletionSource<LicenseResult>();
         var activity = CurrentActivity;
@@ -60,13 +60,14 @@ public class WaterMeterServiceAndroid : IWaterMeterService
             }
         }
 
-        Log.Debug(Tag, $"InitializeLicense: key={licenseKey}, metadata={metadata}, user={deviceUser}");
+        Log.Debug(Tag, $"InitializeLicense: key={licenseKey}, metadata={metadata}, user={deviceUser}, org={maToChuc}");
 
         WaterMeterSDK.Initialize(
             activity.ApplicationContext!,
             licenseKey,
             metadata,
             deviceUser,
+            maToChuc,
             new LicenseCallbackImpl(
                 onSuccess: () =>
                 {

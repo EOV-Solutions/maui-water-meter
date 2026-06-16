@@ -43,6 +43,9 @@ interface WaterMeterSDKBinding
     [Export("initializeLicenseWithLicenseKey:metadataInfo:deviceUser:completion:")]
     void InitializeLicenseWithLicenseKey(string licenseKey, [NullAllowed] NSDictionary metadataInfo, [NullAllowed] string deviceUser, Action<bool, string?> completion);
 
+    [Export("initializeLicenseWithLicenseKey:metadataInfo:deviceUser:maToChuc:completion:")]
+    void InitializeLicenseWithLicenseKey(string licenseKey, [NullAllowed] NSDictionary metadataInfo, [NullAllowed] string deviceUser, [NullAllowed] string maToChuc, Action<bool, string?> completion);
+
     [Export("recognizeWithImage:error:")]
     [return: NullAllowed]
     WMOCRScanResultObjC RecognizeWithImage(UIImage image, out NSError error);

@@ -14,7 +14,7 @@ public interface IWaterMeterService
     /// <param name="metadataInfo">Optional metadata for admin tracking.</param>
     /// <param name="deviceUser">Optional device user identifier.</param>
     /// <returns>License result.</returns>
-    Task<LicenseResult> InitializeLicenseAsync(string licenseKey, Dictionary<string, object>? metadataInfo = null, string? deviceUser = null);
+    Task<LicenseResult> InitializeLicenseAsync(string licenseKey, Dictionary<string, object>? metadataInfo = null, string? deviceUser = null, string? maToChuc = null);
 
     /// <summary>
     /// Check if SDK license is valid.

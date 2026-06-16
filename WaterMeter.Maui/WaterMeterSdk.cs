@@ -44,8 +44,9 @@ public static class WaterMeterSdk
     public static Task<LicenseResult> InitializeLicenseAsync(
         string licenseKey,
         Dictionary<string, object>? metadataInfo = null,
-        string? deviceUser = null) =>
-        Service.InitializeLicenseAsync(licenseKey, metadataInfo, deviceUser);
+        string? deviceUser = null,
+        string? maToChuc = null) =>
+        Service.InitializeLicenseAsync(licenseKey, metadataInfo, deviceUser, maToChuc);
 
     /// <summary>
     /// Check if SDK license is valid.
