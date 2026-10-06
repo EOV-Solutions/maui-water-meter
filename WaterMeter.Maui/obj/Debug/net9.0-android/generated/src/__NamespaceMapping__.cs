@@ -36,7 +36,7 @@ delegate void _JniMarshal_PPLLL_V (IntPtr jnienv, IntPtr klass, IntPtr p0, IntPt
 delegate long _JniMarshal_PPLLLIIL_J (IntPtr jnienv, IntPtr klass, IntPtr p0, IntPtr p1, IntPtr p2, int p3, int p4, IntPtr p5);
 delegate bool _JniMarshal_PPLLLIIL_Z (IntPtr jnienv, IntPtr klass, IntPtr p0, IntPtr p1, IntPtr p2, int p3, int p4, IntPtr p5);
 delegate bool _JniMarshal_PPLLLIILIF_Z (IntPtr jnienv, IntPtr klass, IntPtr p0, IntPtr p1, IntPtr p2, int p3, int p4, IntPtr p5, int p6, float p7);
-delegate void _JniMarshal_PPLLLLL_V (IntPtr jnienv, IntPtr klass, IntPtr p0, IntPtr p1, IntPtr p2, IntPtr p3, IntPtr p4);
+delegate void _JniMarshal_PPLLLLLL_V (IntPtr jnienv, IntPtr klass, IntPtr p0, IntPtr p1, IntPtr p2, IntPtr p3, IntPtr p4, IntPtr p5);
 delegate IntPtr _JniMarshal_PPZ_L (IntPtr jnienv, IntPtr klass, bool p0);
 delegate void _JniMarshal_PPZ_V (IntPtr jnienv, IntPtr klass, bool p0);
 delegate void _JniMarshal_PPZF_V (IntPtr jnienv, IntPtr klass, bool p0, float p1);

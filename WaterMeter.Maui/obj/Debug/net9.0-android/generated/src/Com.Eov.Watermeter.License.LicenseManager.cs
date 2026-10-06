@@ -217,6 +217,35 @@ namespace Com.Eov.Watermeter.License {
 			}
 		}
 
+		static Delegate? cb_isTrialMode_IsTrialMode_Z;
+#pragma warning disable 0169
+		static Delegate GetIsTrialModeHandler ()
+		{
+			if (cb_isTrialMode_IsTrialMode_Z == null)
+				cb_isTrialMode_IsTrialMode_Z = JNINativeWrapper.CreateDelegate (new _JniMarshal_PP_Z (n_IsTrialMode));
+			return cb_isTrialMode_IsTrialMode_Z;
+		}
+
+		static bool n_IsTrialMode (IntPtr jnienv, IntPtr native__this)
+		{
+			var __this = global::Java.Lang.Object.GetObject<global::Com.Eov.Watermeter.License.LicenseManager> (jnienv, native__this, JniHandleOwnership.DoNotTransfer)!;
+			return __this.IsTrialMode;
+		}
+#pragma warning restore 0169
+
+		public virtual unsafe bool IsTrialMode {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter.license']/class[@name='LicenseManager']/method[@name='isTrialMode' and count(parameter)=0]"
+			[Register ("isTrialMode", "()Z", "GetIsTrialModeHandler")]
+			get {
+				const string __id = "isTrialMode.()Z";
+				try {
+					var __rm = _members.InstanceMethods.InvokeVirtualBooleanMethod (__id, this, null);
+					return __rm;
+				} finally {
+				}
+			}
+		}
+
 		static Delegate? cb_isValid_IsValid_Z;
 #pragma warning disable 0169
 		static Delegate GetIsValidHandler ()
@@ -333,6 +362,35 @@ namespace Com.Eov.Watermeter.License {
 			}
 		}
 
+		static Delegate? cb_getTrialActivationsRemaining_GetTrialActivationsRemaining_I;
+#pragma warning disable 0169
+		static Delegate GetGetTrialActivationsRemainingHandler ()
+		{
+			if (cb_getTrialActivationsRemaining_GetTrialActivationsRemaining_I == null)
+				cb_getTrialActivationsRemaining_GetTrialActivationsRemaining_I = JNINativeWrapper.CreateDelegate (new _JniMarshal_PP_I (n_GetTrialActivationsRemaining));
+			return cb_getTrialActivationsRemaining_GetTrialActivationsRemaining_I;
+		}
+
+		static int n_GetTrialActivationsRemaining (IntPtr jnienv, IntPtr native__this)
+		{
+			var __this = global::Java.Lang.Object.GetObject<global::Com.Eov.Watermeter.License.LicenseManager> (jnienv, native__this, JniHandleOwnership.DoNotTransfer)!;
+			return __this.TrialActivationsRemaining;
+		}
+#pragma warning restore 0169
+
+		public virtual unsafe int TrialActivationsRemaining {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter.license']/class[@name='LicenseManager']/method[@name='getTrialActivationsRemaining' and count(parameter)=0]"
+			[Register ("getTrialActivationsRemaining", "()I", "GetGetTrialActivationsRemainingHandler")]
+			get {
+				const string __id = "getTrialActivationsRemaining.()I";
+				try {
+					var __rm = _members.InstanceMethods.InvokeVirtualInt32Method (__id, this, null);
+					return __rm;
+				} finally {
+				}
+			}
+		}
+
 		static Delegate? cb_activate_Activate_Landroid_content_Context_Ljava_lang_String_Lcom_eov_watermeter_license_LicenseManager_LicenseCallback__V;
 #pragma warning disable 0169
 		static Delegate GetActivate_Landroid_content_Context_Ljava_lang_String_Lcom_eov_watermeter_license_LicenseManager_LicenseCallback_Handler ()
@@ -371,45 +429,49 @@ namespace Com.Eov.Watermeter.License {
 			}
 		}
 
-		static Delegate? cb_activate_Activate_Landroid_content_Context_Ljava_lang_String_Lorg_json_JSONObject_Ljava_lang_String_Lcom_eov_watermeter_license_LicenseManager_LicenseCallback__V;
+		static Delegate? cb_activate_Activate_Landroid_content_Context_Ljava_lang_String_Lorg_json_JSONObject_Ljava_lang_String_Ljava_lang_String_Lcom_eov_watermeter_license_LicenseManager_LicenseCallback__V;
 #pragma warning disable 0169
-		static Delegate GetActivate_Landroid_content_Context_Ljava_lang_String_Lorg_json_JSONObject_Ljava_lang_String_Lcom_eov_watermeter_license_LicenseManager_LicenseCallback_Handler ()
+		static Delegate GetActivate_Landroid_content_Context_Ljava_lang_String_Lorg_json_JSONObject_Ljava_lang_String_Ljava_lang_String_Lcom_eov_watermeter_license_LicenseManager_LicenseCallback_Handler ()
 		{
-			if (cb_activate_Activate_Landroid_content_Context_Ljava_lang_String_Lorg_json_JSONObject_Ljava_lang_String_Lcom_eov_watermeter_license_LicenseManager_LicenseCallback__V == null)
-				cb_activate_Activate_Landroid_content_Context_Ljava_lang_String_Lorg_json_JSONObject_Ljava_lang_String_Lcom_eov_watermeter_license_LicenseManager_LicenseCallback__V = JNINativeWrapper.CreateDelegate (new _JniMarshal_PPLLLLL_V (n_Activate_Landroid_content_Context_Ljava_lang_String_Lorg_json_JSONObject_Ljava_lang_String_Lcom_eov_watermeter_license_LicenseManager_LicenseCallback_));
-			return cb_activate_Activate_Landroid_content_Context_Ljava_lang_String_Lorg_json_JSONObject_Ljava_lang_String_Lcom_eov_watermeter_license_LicenseManager_LicenseCallback__V;
+			if (cb_activate_Activate_Landroid_content_Context_Ljava_lang_String_Lorg_json_JSONObject_Ljava_lang_String_Ljava_lang_String_Lcom_eov_watermeter_license_LicenseManager_LicenseCallback__V == null)
+				cb_activate_Activate_Landroid_content_Context_Ljava_lang_String_Lorg_json_JSONObject_Ljava_lang_String_Ljava_lang_String_Lcom_eov_watermeter_license_LicenseManager_LicenseCallback__V = JNINativeWrapper.CreateDelegate (new _JniMarshal_PPLLLLLL_V (n_Activate_Landroid_content_Context_Ljava_lang_String_Lorg_json_JSONObject_Ljava_lang_String_Ljava_lang_String_Lcom_eov_watermeter_license_LicenseManager_LicenseCallback_));
+			return cb_activate_Activate_Landroid_content_Context_Ljava_lang_String_Lorg_json_JSONObject_Ljava_lang_String_Ljava_lang_String_Lcom_eov_watermeter_license_LicenseManager_LicenseCallback__V;
 		}
 
-		static void n_Activate_Landroid_content_Context_Ljava_lang_String_Lorg_json_JSONObject_Ljava_lang_String_Lcom_eov_watermeter_license_LicenseManager_LicenseCallback_ (IntPtr jnienv, IntPtr native__this, IntPtr native_context, IntPtr native_licenseKey, IntPtr native_metadataInfo, IntPtr native_deviceUser, IntPtr native__callback)
+		static void n_Activate_Landroid_content_Context_Ljava_lang_String_Lorg_json_JSONObject_Ljava_lang_String_Ljava_lang_String_Lcom_eov_watermeter_license_LicenseManager_LicenseCallback_ (IntPtr jnienv, IntPtr native__this, IntPtr native_context, IntPtr native_licenseKey, IntPtr native_metadataInfo, IntPtr native_deviceUser, IntPtr native_maToChuc, IntPtr native__callback)
 		{
 			var __this = global::Java.Lang.Object.GetObject<global::Com.Eov.Watermeter.License.LicenseManager> (jnienv, native__this, JniHandleOwnership.DoNotTransfer)!;
 			var context = global::Java.Lang.Object.GetObject<global::Android.Content.Context> (native_context, JniHandleOwnership.DoNotTransfer);
 			var licenseKey = JNIEnv.GetString (native_licenseKey, JniHandleOwnership.DoNotTransfer);
 			var metadataInfo = global::Java.Lang.Object.GetObject<global::Org.Json.JSONObject> (native_metadataInfo, JniHandleOwnership.DoNotTransfer);
 			var deviceUser = JNIEnv.GetString (native_deviceUser, JniHandleOwnership.DoNotTransfer);
+			var maToChuc = JNIEnv.GetString (native_maToChuc, JniHandleOwnership.DoNotTransfer);
 			var @callback = (global::Com.Eov.Watermeter.License.LicenseManager.ILicenseCallback?)global::Java.Lang.Object.GetObject<global::Com.Eov.Watermeter.License.LicenseManager.ILicenseCallback> (native__callback, JniHandleOwnership.DoNotTransfer);
-			__this.Activate (context, licenseKey, metadataInfo, deviceUser, @callback);
+			__this.Activate (context, licenseKey, metadataInfo, deviceUser, maToChuc, @callback);
 		}
 #pragma warning restore 0169
 
-		// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter.license']/class[@name='LicenseManager']/method[@name='activate' and count(parameter)=5 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='org.json.JSONObject'] and parameter[4][@type='java.lang.String'] and parameter[5][@type='com.eov.watermeter.license.LicenseManager.LicenseCallback']]"
-		[Register ("activate", "(Landroid/content/Context;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;Lcom/eov/watermeter/license/LicenseManager$LicenseCallback;)V", "GetActivate_Landroid_content_Context_Ljava_lang_String_Lorg_json_JSONObject_Ljava_lang_String_Lcom_eov_watermeter_license_LicenseManager_LicenseCallback_Handler")]
-		public virtual unsafe void Activate (global::Android.Content.Context? context, string? licenseKey, global::Org.Json.JSONObject? metadataInfo, string? deviceUser, global::Com.Eov.Watermeter.License.LicenseManager.ILicenseCallback? @callback)
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter.license']/class[@name='LicenseManager']/method[@name='activate' and count(parameter)=6 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='org.json.JSONObject'] and parameter[4][@type='java.lang.String'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='com.eov.watermeter.license.LicenseManager.LicenseCallback']]"
+		[Register ("activate", "(Landroid/content/Context;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Lcom/eov/watermeter/license/LicenseManager$LicenseCallback;)V", "GetActivate_Landroid_content_Context_Ljava_lang_String_Lorg_json_JSONObject_Ljava_lang_String_Ljava_lang_String_Lcom_eov_watermeter_license_LicenseManager_LicenseCallback_Handler")]
+		public virtual unsafe void Activate (global::Android.Content.Context? context, string? licenseKey, global::Org.Json.JSONObject? metadataInfo, string? deviceUser, string? maToChuc, global::Com.Eov.Watermeter.License.LicenseManager.ILicenseCallback? @callback)
 		{
-			const string __id = "activate.(Landroid/content/Context;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;Lcom/eov/watermeter/license/LicenseManager$LicenseCallback;)V";
+			const string __id = "activate.(Landroid/content/Context;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Lcom/eov/watermeter/license/LicenseManager$LicenseCallback;)V";
 			IntPtr native_licenseKey = JNIEnv.NewString ((string?)licenseKey);
 			IntPtr native_deviceUser = JNIEnv.NewString ((string?)deviceUser);
+			IntPtr native_maToChuc = JNIEnv.NewString ((string?)maToChuc);
 			try {
-				JniArgumentValue* __args = stackalloc JniArgumentValue [5];
+				JniArgumentValue* __args = stackalloc JniArgumentValue [6];
 				__args [0] = new JniArgumentValue ((context == null) ? IntPtr.Zero : ((global::Java.Lang.Object) context).Handle);
 				__args [1] = new JniArgumentValue (native_licenseKey);
 				__args [2] = new JniArgumentValue ((metadataInfo == null) ? IntPtr.Zero : ((global::Java.Lang.Object) metadataInfo).Handle);
 				__args [3] = new JniArgumentValue (native_deviceUser);
-				__args [4] = new JniArgumentValue ((@callback == null) ? IntPtr.Zero : ((global::Java.Lang.Object) @callback).Handle);
+				__args [4] = new JniArgumentValue (native_maToChuc);
+				__args [5] = new JniArgumentValue ((@callback == null) ? IntPtr.Zero : ((global::Java.Lang.Object) @callback).Handle);
 				_members.InstanceMethods.InvokeVirtualVoidMethod (__id, this, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_licenseKey);
 				JNIEnv.DeleteLocalRef (native_deviceUser);
+				JNIEnv.DeleteLocalRef (native_maToChuc);
 				global::System.GC.KeepAlive (context);
 				global::System.GC.KeepAlive (metadataInfo);
 				global::System.GC.KeepAlive (@callback);

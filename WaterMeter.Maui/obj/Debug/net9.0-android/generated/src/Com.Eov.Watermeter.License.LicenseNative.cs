@@ -42,6 +42,10 @@ namespace Com.Eov.Watermeter.License {
 		[Register ("STATUS_QUOTA_EXCEEDED")]
 		public const int StatusQuotaExceeded = (int) 6;
 
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.eov.watermeter.license']/class[@name='LicenseNative']/field[@name='STATUS_TRIAL']"
+		[Register ("STATUS_TRIAL")]
+		public const int StatusTrial = (int) 7;
+
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.eov.watermeter.license']/class[@name='LicenseNative']/field[@name='STATUS_VALID']"
 		[Register ("STATUS_VALID")]
 		public const int StatusValid = (int) 1;
@@ -128,14 +132,14 @@ namespace Com.Eov.Watermeter.License {
 			}
 		}
 
-		public static unsafe string? DefaultSecretKey {
-			// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter.license']/class[@name='LicenseNative']/method[@name='getDefaultSecretKey' and count(parameter)=0]"
-			[Register ("getDefaultSecretKey", "()Ljava/lang/String;", "")]
+		public static unsafe bool IsInTrialMode {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter.license']/class[@name='LicenseNative']/method[@name='isInTrialMode' and count(parameter)=0]"
+			[Register ("isInTrialMode", "()Z", "")]
 			get {
-				const string __id = "getDefaultSecretKey.()Ljava/lang/String;";
+				const string __id = "isInTrialMode.()Z";
 				try {
-					var __rm = _members.StaticMethods.InvokeObjectMethod (__id, null);
-					return JNIEnv.GetString (__rm.Handle, JniHandleOwnership.TransferLocalRef);
+					var __rm = _members.StaticMethods.InvokeBooleanMethod (__id, null);
+					return __rm;
 				} finally {
 				}
 			}
@@ -206,6 +210,19 @@ namespace Com.Eov.Watermeter.License {
 			}
 		}
 
+		public static unsafe int TrialActivationsRemaining {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter.license']/class[@name='LicenseNative']/method[@name='getTrialActivationsRemaining' and count(parameter)=0]"
+			[Register ("getTrialActivationsRemaining", "()I", "")]
+			get {
+				const string __id = "getTrialActivationsRemaining.()I";
+				try {
+					var __rm = _members.StaticMethods.InvokeInt32Method (__id, null);
+					return __rm;
+				} finally {
+				}
+			}
+		}
+
 		// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter.license']/class[@name='LicenseNative']/method[@name='clearLicense' and count(parameter)=0]"
 		[Register ("clearLicense", "()V", "")]
 		public static unsafe void ClearLicense ()
@@ -213,6 +230,19 @@ namespace Com.Eov.Watermeter.License {
 			const string __id = "clearLicense.()V";
 			try {
 				_members.StaticMethods.InvokeVoidMethod (__id, null);
+			} finally {
+			}
+		}
+
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter.license']/class[@name='LicenseNative']/method[@name='enableTrialMode' and count(parameter)=1 and parameter[1][@type='int']]"
+		[Register ("enableTrialMode", "(I)V", "")]
+		public static unsafe void EnableTrialMode (int p0)
+		{
+			const string __id = "enableTrialMode.(I)V";
+			try {
+				JniArgumentValue* __args = stackalloc JniArgumentValue [1];
+				__args [0] = new JniArgumentValue (p0);
+				_members.StaticMethods.InvokeVoidMethod (__id, __args);
 			} finally {
 			}
 		}
@@ -255,6 +285,17 @@ namespace Com.Eov.Watermeter.License {
 		public static unsafe void ResetPendingUsage ()
 		{
 			const string __id = "resetPendingUsage.()V";
+			try {
+				_members.StaticMethods.InvokeVoidMethod (__id, null);
+			} finally {
+			}
+		}
+
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter.license']/class[@name='LicenseNative']/method[@name='resetTrialMode' and count(parameter)=0]"
+		[Register ("resetTrialMode", "()V", "")]
+		public static unsafe void ResetTrialMode ()
+		{
+			const string __id = "resetTrialMode.()V";
 			try {
 				_members.StaticMethods.InvokeVoidMethod (__id, null);
 			} finally {
@@ -306,6 +347,17 @@ namespace Com.Eov.Watermeter.License {
 		public static unsafe void UpdateLastSync ()
 		{
 			const string __id = "updateLastSync.()V";
+			try {
+				_members.StaticMethods.InvokeVoidMethod (__id, null);
+			} finally {
+			}
+		}
+
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter.license']/class[@name='LicenseNative']/method[@name='useDefaultSecretKey' and count(parameter)=0]"
+		[Register ("useDefaultSecretKey", "()V", "")]
+		public static unsafe void UseDefaultSecretKey ()
+		{
+			const string __id = "useDefaultSecretKey.()V";
 			try {
 				_members.StaticMethods.InvokeVoidMethod (__id, null);
 			} finally {

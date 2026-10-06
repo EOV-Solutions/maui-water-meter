@@ -544,6 +544,36 @@ namespace Com.Eov.Watermeter {
 			}
 		}
 
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter']/class[@name='WaterMeterSDK']/method[@name='initialize' and count(parameter)=7 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='org.json.JSONObject'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='java.lang.String'] and parameter[7][@type='com.eov.watermeter.WaterMeterSDK.LicenseCallback']]"
+		[Register ("initialize", "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;)V", "")]
+		public static unsafe void Initialize (global::Android.Content.Context? context, string? licenseKey, string? secretKey, global::Org.Json.JSONObject? metadataInfo, string? deviceUser, string? maToChuc, global::Com.Eov.Watermeter.WaterMeterSDK.ILicenseCallback? @callback)
+		{
+			const string __id = "initialize.(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;)V";
+			IntPtr native_licenseKey = JNIEnv.NewString ((string?)licenseKey);
+			IntPtr native_secretKey = JNIEnv.NewString ((string?)secretKey);
+			IntPtr native_deviceUser = JNIEnv.NewString ((string?)deviceUser);
+			IntPtr native_maToChuc = JNIEnv.NewString ((string?)maToChuc);
+			try {
+				JniArgumentValue* __args = stackalloc JniArgumentValue [7];
+				__args [0] = new JniArgumentValue ((context == null) ? IntPtr.Zero : ((global::Java.Lang.Object) context).Handle);
+				__args [1] = new JniArgumentValue (native_licenseKey);
+				__args [2] = new JniArgumentValue (native_secretKey);
+				__args [3] = new JniArgumentValue ((metadataInfo == null) ? IntPtr.Zero : ((global::Java.Lang.Object) metadataInfo).Handle);
+				__args [4] = new JniArgumentValue (native_deviceUser);
+				__args [5] = new JniArgumentValue (native_maToChuc);
+				__args [6] = new JniArgumentValue ((@callback == null) ? IntPtr.Zero : ((global::Java.Lang.Object) @callback).Handle);
+				_members.StaticMethods.InvokeVoidMethod (__id, __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_licenseKey);
+				JNIEnv.DeleteLocalRef (native_secretKey);
+				JNIEnv.DeleteLocalRef (native_deviceUser);
+				JNIEnv.DeleteLocalRef (native_maToChuc);
+				global::System.GC.KeepAlive (context);
+				global::System.GC.KeepAlive (metadataInfo);
+				global::System.GC.KeepAlive (@callback);
+			}
+		}
+
 		// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter']/class[@name='WaterMeterSDK']/method[@name='initialize' and count(parameter)=5 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='org.json.JSONObject'] and parameter[4][@type='java.lang.String'] and parameter[5][@type='com.eov.watermeter.WaterMeterSDK.LicenseCallback']]"
 		[Register ("initialize", "(Landroid/content/Context;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;)V", "")]
 		public static unsafe void Initialize (global::Android.Content.Context? context, string? licenseKey, global::Org.Json.JSONObject? metadataInfo, string? deviceUser, global::Com.Eov.Watermeter.WaterMeterSDK.ILicenseCallback? @callback)
@@ -562,6 +592,33 @@ namespace Com.Eov.Watermeter {
 			} finally {
 				JNIEnv.DeleteLocalRef (native_licenseKey);
 				JNIEnv.DeleteLocalRef (native_deviceUser);
+				global::System.GC.KeepAlive (context);
+				global::System.GC.KeepAlive (metadataInfo);
+				global::System.GC.KeepAlive (@callback);
+			}
+		}
+
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter']/class[@name='WaterMeterSDK']/method[@name='initialize' and count(parameter)=6 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='org.json.JSONObject'] and parameter[4][@type='java.lang.String'] and parameter[5][@type='java.lang.String'] and parameter[6][@type='com.eov.watermeter.WaterMeterSDK.LicenseCallback']]"
+		[Register ("initialize", "(Landroid/content/Context;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;)V", "")]
+		public static unsafe void Initialize (global::Android.Content.Context? context, string? licenseKey, global::Org.Json.JSONObject? metadataInfo, string? deviceUser, string? maToChuc, global::Com.Eov.Watermeter.WaterMeterSDK.ILicenseCallback? @callback)
+		{
+			const string __id = "initialize.(Landroid/content/Context;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;)V";
+			IntPtr native_licenseKey = JNIEnv.NewString ((string?)licenseKey);
+			IntPtr native_deviceUser = JNIEnv.NewString ((string?)deviceUser);
+			IntPtr native_maToChuc = JNIEnv.NewString ((string?)maToChuc);
+			try {
+				JniArgumentValue* __args = stackalloc JniArgumentValue [6];
+				__args [0] = new JniArgumentValue ((context == null) ? IntPtr.Zero : ((global::Java.Lang.Object) context).Handle);
+				__args [1] = new JniArgumentValue (native_licenseKey);
+				__args [2] = new JniArgumentValue ((metadataInfo == null) ? IntPtr.Zero : ((global::Java.Lang.Object) metadataInfo).Handle);
+				__args [3] = new JniArgumentValue (native_deviceUser);
+				__args [4] = new JniArgumentValue (native_maToChuc);
+				__args [5] = new JniArgumentValue ((@callback == null) ? IntPtr.Zero : ((global::Java.Lang.Object) @callback).Handle);
+				_members.StaticMethods.InvokeVoidMethod (__id, __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_licenseKey);
+				JNIEnv.DeleteLocalRef (native_deviceUser);
+				JNIEnv.DeleteLocalRef (native_maToChuc);
 				global::System.GC.KeepAlive (context);
 				global::System.GC.KeepAlive (metadataInfo);
 				global::System.GC.KeepAlive (@callback);

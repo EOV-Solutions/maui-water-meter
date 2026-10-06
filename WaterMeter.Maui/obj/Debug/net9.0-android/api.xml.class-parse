@@ -275,6 +275,49 @@
         visibility="public"
         bridge="false"
         synthetic="false"
+        jni-signature="(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;)V">
+        <parameter
+          name="context"
+          type="android.content.Context"
+          jni-type="Landroid/content/Context;" />
+        <parameter
+          name="licenseKey"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+        <parameter
+          name="secretKey"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+        <parameter
+          name="metadataInfo"
+          type="org.json.JSONObject"
+          jni-type="Lorg/json/JSONObject;" />
+        <parameter
+          name="deviceUser"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+        <parameter
+          name="maToChuc"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+        <parameter
+          name="callback"
+          type="com.eov.watermeter.WaterMeterSDK.LicenseCallback"
+          jni-type="Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="initialize"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="true"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
         jni-signature="(Landroid/content/Context;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;)V">
         <parameter
           name="context"
@@ -290,6 +333,45 @@
           jni-type="Lorg/json/JSONObject;" />
         <parameter
           name="deviceUser"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+        <parameter
+          name="callback"
+          type="com.eov.watermeter.WaterMeterSDK.LicenseCallback"
+          jni-type="Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="initialize"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="true"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Landroid/content/Context;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;)V">
+        <parameter
+          name="context"
+          type="android.content.Context"
+          jni-type="Landroid/content/Context;" />
+        <parameter
+          name="licenseKey"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+        <parameter
+          name="metadataInfo"
+          type="org.json.JSONObject"
+          jni-type="Lorg/json/JSONObject;" />
+        <parameter
+          name="deviceUser"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+        <parameter
+          name="maToChuc"
           type="java.lang.String"
           jni-type="Ljava/lang/String;" />
         <parameter
@@ -471,13 +553,66 @@
       deprecated="not deprecated"
       enclosing-method-jni-type="Lcom/eov/watermeter/WaterMeterSDK;"
       enclosing-method-name="initialize"
-      enclosing-method-signature="(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;)V"
+      enclosing-method-signature="(Landroid/content/Context;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;)V"
       jni-extends="Ljava/lang/Object;"
       extends="java.lang.Object"
       extends-generic-aware="java.lang.Object"
       final="false"
       name="WaterMeterSDK.1"
       jni-signature="Lcom/eov/watermeter/WaterMeterSDK$1;"
+      source-file-name="WaterMeterSDK.java"
+      static="false"
+      visibility="">
+      <implements
+        name="com.eov.watermeter.license.LicenseManager.LicenseCallback"
+        name-generic-aware="com.eov.watermeter.license.LicenseManager.LicenseCallback"
+        jni-type="Lcom/eov/watermeter/license/LicenseManager$LicenseCallback;" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="onError"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)V">
+        <parameter
+          name="errorMessage"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="onSuccess"
+        native="false"
+        return="void"
+        jni-return="V"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+    </class>
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      enclosing-method-jni-type="Lcom/eov/watermeter/WaterMeterSDK;"
+      enclosing-method-name="initialize"
+      enclosing-method-signature="(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Lcom/eov/watermeter/WaterMeterSDK$LicenseCallback;)V"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="false"
+      name="WaterMeterSDK.2"
+      jni-signature="Lcom/eov/watermeter/WaterMeterSDK$2;"
       source-file-name="WaterMeterSDK.java"
       static="false"
       visibility="">
@@ -2561,7 +2696,7 @@
         visibility="public"
         bridge="false"
         synthetic="false"
-        jni-signature="(Landroid/content/Context;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;Lcom/eov/watermeter/license/LicenseManager$LicenseCallback;)V">
+        jni-signature="(Landroid/content/Context;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;Lcom/eov/watermeter/license/LicenseManager$LicenseCallback;)V">
         <parameter
           name="context"
           type="android.content.Context"
@@ -2576,6 +2711,10 @@
           jni-type="Lorg/json/JSONObject;" />
         <parameter
           name="deviceUser"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+        <parameter
+          name="maToChuc"
           type="java.lang.String"
           jni-type="Ljava/lang/String;" />
         <parameter
@@ -2671,6 +2810,20 @@
         abstract="false"
         deprecated="not deprecated"
         final="false"
+        name="getTrialActivationsRemaining"
+        native="false"
+        return="int"
+        jni-return="I"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()I" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
         name="incrementUsage"
         native="false"
         return="void"
@@ -2705,6 +2858,20 @@
         deprecated="not deprecated"
         final="false"
         name="isBlockedDueToQuota"
+        native="false"
+        return="boolean"
+        jni-return="Z"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Z" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="isTrialMode"
         native="false"
         return="boolean"
         jni-return="Z"
@@ -2788,6 +2955,18 @@
       final="false"
       name="LicenseManager.DeviceNotRegisteredException"
       jni-signature="Lcom/eov/watermeter/license/LicenseManager$DeviceNotRegisteredException;"
+      source-file-name="LicenseManager.java"
+      static="true"
+      visibility="private" />
+    <class
+      abstract="false"
+      deprecated="not deprecated"
+      jni-extends="Ljava/lang/Exception;"
+      extends="java.lang.Exception"
+      extends-generic-aware="java.lang.Exception"
+      final="false"
+      name="LicenseManager.InvalidLicenseKeyException"
+      jni-signature="Lcom/eov/watermeter/license/LicenseManager$InvalidLicenseKeyException;"
       source-file-name="LicenseManager.java"
       static="true"
       visibility="private" />
@@ -2885,21 +3064,26 @@
         abstract="false"
         deprecated="not deprecated"
         final="false"
-        name="getBaseUrl"
+        name="enableTrialMode"
         native="true"
-        return="java.lang.String"
-        jni-return="Ljava/lang/String;"
+        return="void"
+        jni-return="V"
         static="true"
         synchronized="false"
         visibility="public"
         bridge="false"
         synthetic="false"
-        jni-signature="()Ljava/lang/String;" />
+        jni-signature="(I)V">
+        <parameter
+          name="p0"
+          type="int"
+          jni-type="I" />
+      </method>
       <method
         abstract="false"
         deprecated="not deprecated"
         final="false"
-        name="getDefaultSecretKey"
+        name="getBaseUrl"
         native="true"
         return="java.lang.String"
         jni-return="Ljava/lang/String;"
@@ -2969,6 +3153,20 @@
         abstract="false"
         deprecated="not deprecated"
         final="false"
+        name="getTrialActivationsRemaining"
+        native="true"
+        return="int"
+        jni-return="I"
+        static="true"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()I" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
         name="incrementUsage"
         native="true"
         return="boolean"
@@ -3025,6 +3223,20 @@
         abstract="false"
         deprecated="not deprecated"
         final="false"
+        name="isInTrialMode"
+        native="true"
+        return="boolean"
+        jni-return="Z"
+        static="true"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()Z" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
         name="isLicenseValid"
         native="true"
         return="boolean"
@@ -3040,6 +3252,20 @@
         deprecated="not deprecated"
         final="false"
         name="resetPendingUsage"
+        native="true"
+        return="void"
+        jni-return="V"
+        static="true"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="resetTrialMode"
         native="true"
         return="void"
         jni-return="V"
@@ -3134,6 +3360,20 @@
         bridge="false"
         synthetic="false"
         jni-signature="()V" />
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="useDefaultSecretKey"
+        native="true"
+        return="void"
+        jni-return="V"
+        static="true"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="()V" />
       <field
         deprecated="not deprecated"
         final="true"
@@ -3210,6 +3450,19 @@
         type-generic-aware="int"
         jni-signature="I"
         value="6"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="STATUS_TRIAL"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="int"
+        type-generic-aware="int"
+        jni-signature="I"
+        value="7"
         visibility="public"
         volatile="false" />
       <field
