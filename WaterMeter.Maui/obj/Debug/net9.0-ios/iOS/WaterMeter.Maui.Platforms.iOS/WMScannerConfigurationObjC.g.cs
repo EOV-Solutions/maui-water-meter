@@ -196,6 +196,29 @@ namespace WaterMeter.Maui.Platforms.iOS {
 			}
 		}
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual string? ImageFileName {
+			[Export ("imageFileName")]
+			get {
+				string ret;
+				if (IsDirectBinding) {
+					ret = CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("imageFileName")), false)!;
+				} else {
+					ret = CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("imageFileName")), false)!;
+				}
+				return ret;
+			}
+			[Export ("setImageFileName:")]
+			set {
+				var nsvalue = CFString.CreateNative (value);
+				if (IsDirectBinding) {
+					global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setImageFileName:"), nsvalue);
+				} else {
+					global::ApiDefinition.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setImageFileName:"), nsvalue);
+				}
+				CFString.ReleaseNative (nsvalue);
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public virtual nint ImageMaxHeight {
 			[Export ("imageMaxHeight")]
 			get {
@@ -235,6 +258,29 @@ namespace WaterMeter.Maui.Platforms.iOS {
 				} else {
 					global::ApiDefinition.Messaging.void_objc_msgSendSuper_IntPtr (this.SuperHandle, Selector.GetHandle ("setImageMaxWidth:"), value);
 				}
+			}
+		}
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public virtual string? ImageSaveDir {
+			[Export ("imageSaveDir")]
+			get {
+				string ret;
+				if (IsDirectBinding) {
+					ret = CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSend (this.Handle, Selector.GetHandle ("imageSaveDir")), false)!;
+				} else {
+					ret = CFString.FromHandle (global::ApiDefinition.Messaging.NativeHandle_objc_msgSendSuper (this.SuperHandle, Selector.GetHandle ("imageSaveDir")), false)!;
+				}
+				return ret;
+			}
+			[Export ("setImageSaveDir:")]
+			set {
+				var nsvalue = CFString.CreateNative (value);
+				if (IsDirectBinding) {
+					global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle (this.Handle, Selector.GetHandle ("setImageSaveDir:"), nsvalue);
+				} else {
+					global::ApiDefinition.Messaging.void_objc_msgSendSuper_NativeHandle (this.SuperHandle, Selector.GetHandle ("setImageSaveDir:"), nsvalue);
+				}
+				CFString.ReleaseNative (nsvalue);
 			}
 		}
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]

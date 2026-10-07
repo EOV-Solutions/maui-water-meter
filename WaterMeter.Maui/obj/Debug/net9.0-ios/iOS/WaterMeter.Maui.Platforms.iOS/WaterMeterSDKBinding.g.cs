@@ -191,6 +191,30 @@ namespace WaterMeter.Maui.Platforms.iOS {
 			CFString.ReleaseNative (nslicenseKey);
 			CFString.ReleaseNative (nsdeviceUser);
 		}
+		[Export ("initializeLicenseWithLicenseKey:metadataInfo:deviceUser:maToChuc:completion:")]
+		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+		public unsafe virtual void InitializeLicenseWithLicenseKey (string licenseKey, NSDictionary? metadataInfo, string? deviceUser, string? maToChuc, [BlockProxy (typeof (ObjCRuntime.Trampolines.NIDActionArity2V0))]global::System.Action<bool, string> completion)
+		{
+			if (licenseKey is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (licenseKey));
+			var metadataInfo__handle__ = metadataInfo.GetHandle ();
+			if (completion is null)
+				ObjCRuntime.ThrowHelper.ThrowArgumentNullException (nameof (completion));
+			var nslicenseKey = CFString.CreateNative (licenseKey);
+			var nsdeviceUser = CFString.CreateNative (deviceUser);
+			var nsmaToChuc = CFString.CreateNative (maToChuc);
+			using var block_completion = Trampolines.SDActionArity2V0.CreateBlock (completion);
+			BlockLiteral *block_ptr_completion = &block_completion;
+			if (IsDirectBinding) {
+				global::ApiDefinition.Messaging.void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle (this.Handle, Selector.GetHandle ("initializeLicenseWithLicenseKey:metadataInfo:deviceUser:maToChuc:completion:"), nslicenseKey, metadataInfo__handle__, nsdeviceUser, nsmaToChuc, (IntPtr) block_ptr_completion);
+			} else {
+				global::ApiDefinition.Messaging.void_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle (this.SuperHandle, Selector.GetHandle ("initializeLicenseWithLicenseKey:metadataInfo:deviceUser:maToChuc:completion:"), nslicenseKey, metadataInfo__handle__, nsdeviceUser, nsmaToChuc, (IntPtr) block_ptr_completion);
+			}
+			GC.KeepAlive (metadataInfo);
+			CFString.ReleaseNative (nslicenseKey);
+			CFString.ReleaseNative (nsdeviceUser);
+			CFString.ReleaseNative (nsmaToChuc);
+		}
 		[Export ("initializeWithBundle:configuration:error:")]
 		[BindingImpl (BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
 		public unsafe virtual void InitializeWithBundle (NSBundle bundle, WMPredictorConfigurationObjC? configuration, out NSError error)

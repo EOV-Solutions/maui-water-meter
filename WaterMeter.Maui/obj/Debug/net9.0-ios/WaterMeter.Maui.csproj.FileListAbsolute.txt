@@ -11,4 +11,5 @@
 /Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-ios/refint/WaterMeter.Maui.dll
 /Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-ios/WaterMeter.Maui.pdb
 /Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-ios/ref/WaterMeter.Maui.dll
+/Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-ios/WaterMeter.Maui.sourcelink.json
 /Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/bin/Debug/net9.0-ios/WaterMeter.Maui.resources.stamp

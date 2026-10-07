@@ -139,6 +139,12 @@ public class WaterMeterServiceiOS : NSObject, IWaterMeterService, IWMCameraScann
                     imageMaxWidth: options.ImageMaxWidth ?? 0,
                     imageMaxHeight: options.ImageMaxHeight ?? 0);
 
+                if (!string.IsNullOrEmpty(options.ImageSaveDir))
+                    config.ImageSaveDir = options.ImageSaveDir;
+
+                if (!string.IsNullOrEmpty(options.ImageFileName))
+                    config.ImageFileName = options.ImageFileName;
+
                 NSError? error = null;
                 WaterMeterSDKBinding.Shared.PresentScannerWithConfiguration(
                     config,

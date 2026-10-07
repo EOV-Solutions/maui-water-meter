@@ -231,7 +231,9 @@ var result = await WaterMeterSdk.ScanAsync(new ScanOptions
     AutoCapture = true,                 // Tự động chụp
     MinConfidence = 0.8,                // Ngưỡng tin cậy
     ImageMaxWidth = 1920,               // Resize ảnh về max width (giữ tỷ lệ)
-    ImageMaxHeight = 1080               // Resize ảnh về max height (giữ tỷ lệ)
+    ImageMaxHeight = 1080,              // Resize ảnh về max height (giữ tỷ lệ)
+    ImageSaveDir = FileSystem.AppDataDirectory, // Thư mục lưu ảnh (tuỳ chọn)
+    ImageFileName = "KH001_202610.jpg"  // Tên file ảnh (tuỳ chọn)
 });
 
 // result = {
@@ -248,6 +250,33 @@ var result = await WaterMeterSdk.ScanAsync(new ScanOptions
 var formatted = WaterMeterSdk.FormatReading(result.Text);
 Console.WriteLine($"Formatted: {formatted} m³");
 ```
+
+### Chọn nơi lưu ảnh
+
+Mặc định SDK lưu ảnh chụp vào thư mục riêng của SDK. App có thể tự chọn thư mục và tên file bằng `ImageSaveDir` và `ImageFileName`:
+
+```csharp
+var result = await WaterMeterSdk.ScanAsync(new ScanOptions
+{
+    // Đường dẫn tuyệt đối hoặc URL file:// (vd. FileSystem.AppDataDirectory)
+    ImageSaveDir = Path.Combine(FileSystem.AppDataDirectory, "meter_photos"),
+    // Chỉ tên file, không kèm thư mục
+    ImageFileName = "KH001_202610.jpg"
+});
+
+if (result.Success && result.ImagePath != null)
+{
+    // Luôn dùng ImagePath trả về, không tự ghép đường dẫn
+    Console.WriteLine($"Ảnh đã lưu tại: {result.ImagePath}");
+}
+```
+
+- Thư mục sẽ được tạo nếu chưa tồn tại. Thư mục phải là nơi app có quyền ghi (`FileSystem.AppDataDirectory`, `FileSystem.CacheDirectory`...). Android 10+ không ghi trực tiếp được vào thư mục dùng chung như `/sdcard/DCIM`; trên iOS thư mục phải nằm trong sandbox của app.
+- Tự thêm đuôi `.jpg` nếu tên file không kết thúc bằng `.jpg`/`.jpeg`. Phần thư mục trong `ImageFileName` (nếu có) bị bỏ qua. File trùng tên sẽ bị ghi đè.
+- Nếu thư mục không ghi được, SDK tự lưu vào thư mục mặc định → **luôn dùng `result.ImagePath`** thay vì tự ghép đường dẫn.
+- Mặc định (không truyền các tuỳ chọn này):
+  - Android: `<externalFilesDir>/Pictures/WaterMeter/<epoch ms>.jpg`
+  - iOS: `<Application Support>/NoCloud/scanned_images/<epoch ms>.jpg`
 
 ### Tích hợp hoàn chỉnh
 
@@ -601,8 +630,12 @@ var formatted2 = WaterMeterSdk.FormatReading("12345678", decimalPlaces: 4); // "
 | `MinConfidence` | double? | null (dùng settings SDK) | Ngưỡng tin cậy |
 | `ImageMaxWidth` | int? | null (ảnh gốc) | Chiều rộng tối đa ảnh (px) |
 | `ImageMaxHeight` | int? | null (ảnh gốc) | Chiều cao tối đa ảnh (px) |
+| `ImageSaveDir` | string? | null (thư mục mặc định của SDK) | Thư mục lưu ảnh: đường dẫn tuyệt đối hoặc URL `file://` (vd. `FileSystem.AppDataDirectory`) |
+| `ImageFileName` | string? | null (`<epoch ms>.jpg`) | Tên file ảnh, không kèm thư mục (vd. `"KH001_202610.jpg"`) |
 
 **Lưu ý:** Resize ảnh giữ tỷ lệ. Nếu chỉ định cả width và height, ảnh sẽ fit trong bounds.
+
+**Lưu ý lưu ảnh:** Thư mục phải ghi được (nếu không SDK lưu vào thư mục mặc định), đuôi `.jpg` được tự thêm, file trùng tên bị ghi đè. Luôn dùng `ScanResult.ImagePath` trả về. Xem mục *Chọn nơi lưu ảnh*.
 
 ## 📱 Đặc điểm theo nền tảng
 
@@ -618,8 +651,9 @@ var formatted2 = WaterMeterSdk.FormatReading("12345678", decimalPlaces: 4); // "
 
 ### Lưu ý riêng theo nền tảng
 
-- Trên **iOS**, ảnh scan được lưu tại `Library/Application Support/NoCloud/scanned_images/`.
-- Trên **Android**, ảnh scan được lưu tại thư mục cache của ứng dụng.
+- Trên **iOS**, mặc định ảnh scan được lưu tại `Library/Application Support/NoCloud/scanned_images/`.
+- Trên **Android**, mặc định ảnh scan được lưu tại `<externalFilesDir>/Pictures/WaterMeter/` (thư mục riêng của ứng dụng).
+- Có thể đổi thư mục / tên file ảnh bằng `ScanOptions.ImageSaveDir` / `ScanOptions.ImageFileName`.
 - **iOS Simulator không hỗ trợ**: `WaterMeterSDK.framework` chỉ build cho `arm64` (device thật).
 
 ## 🔧 Khắc phục sự cố

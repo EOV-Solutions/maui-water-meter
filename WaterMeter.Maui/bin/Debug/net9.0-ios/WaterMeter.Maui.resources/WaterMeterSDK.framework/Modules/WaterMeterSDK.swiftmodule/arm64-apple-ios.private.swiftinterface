@@ -30,10 +30,13 @@ import _SwiftConcurrencyShims
   @objc(initializeLicenseWithLicenseKey:metadataInfo:deviceUser:completion:) final public func initializeLicenseObjC(licenseKey: Swift.String, metadataInfo: Foundation.NSDictionary?, deviceUser: Swift.String?, completion: @escaping (Swift.Bool, Swift.String?) -> Swift.Void)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  final public func initializeLicense(licenseKey: Swift.String, metadataInfo: [Swift.String : Any]?, deviceUser: Swift.String?, completion: @escaping WaterMeterSDK.WMLicenseCallback)
+  @objc(initializeLicenseWithLicenseKey:metadataInfo:deviceUser:maToChuc:completion:) final public func initializeLicenseObjC(licenseKey: Swift.String, metadataInfo: Foundation.NSDictionary?, deviceUser: Swift.String?, maToChuc: Swift.String?, completion: @escaping (Swift.Bool, Swift.String?) -> Swift.Void)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  final public func initializeLicense(licenseKey: Swift.String, secretKey: Swift.String, metadataInfo: [Swift.String : Any]?, deviceUser: Swift.String?, completion: @escaping WaterMeterSDK.WMLicenseCallback)
+  final public func initializeLicense(licenseKey: Swift.String, metadataInfo: [Swift.String : Any]?, deviceUser: Swift.String?, maToChuc: Swift.String? = nil, completion: @escaping WaterMeterSDK.WMLicenseCallback)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func initializeLicense(licenseKey: Swift.String, secretKey: Swift.String, metadataInfo: [Swift.String : Any]?, deviceUser: Swift.String?, maToChuc: Swift.String? = nil, completion: @escaping WaterMeterSDK.WMLicenseCallback)
   #endif
   final public var isLicenseValid: Swift.Bool {
     get
@@ -104,6 +107,8 @@ public class WMPredictor {
 public struct WMScannerConfiguration {
   public var imageMaxWidth: Swift.Int?
   public var imageMaxHeight: Swift.Int?
+  public var imageSaveDir: Swift.String?
+  public var imageFileName: Swift.String?
   public var autoCapture: Swift.Bool
   public var confidenceThreshold: Swift.Float
   public var iouThreshold: Swift.Float
@@ -567,6 +572,8 @@ public protocol WMSettingsViewControllerDelegate : AnyObject {
   @objc public var title: Swift.String?
   @objc public var imageMaxWidth: Swift.Int
   @objc public var imageMaxHeight: Swift.Int
+  @objc public var imageSaveDir: Swift.String?
+  @objc public var imageFileName: Swift.String?
   @objc public var autoCaptureOverride: Swift.Bool
   @objc public var minConfidenceOverride: Swift.Bool
   @objc public var flashEnabledOverride: Swift.Bool
@@ -661,6 +668,9 @@ public protocol WMSettingsViewControllerDelegate : AnyObject {
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public func initializeLicense(licenseKey: Swift.String, metadataInfo: Foundation.NSDictionary?, deviceUser: Swift.String?, completion: @escaping WaterMeterSDK.WaterMeterSDK.LicenseCallback)
   #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func initializeLicense(licenseKey: Swift.String, metadataInfo: Foundation.NSDictionary?, deviceUser: Swift.String?, maToChuc: Swift.String?, completion: @escaping WaterMeterSDK.WaterMeterSDK.LicenseCallback)
+  #endif
   @objc public var isLicenseValid: Swift.Bool {
     @objc get
   }
@@ -693,7 +703,7 @@ public typealias WMLicenseCallback = (WaterMeterSDK.WMLicenseResult) -> Swift.Vo
   final public func setSecretKey(_ secretKey: Swift.String)
   final public func activate(licenseKey: Swift.String, completion: @escaping WaterMeterSDK.WMLicenseCallback)
   #if compiler(>=5.3) && $NonescapableTypes
-  final public func activate(licenseKey: Swift.String, metadataInfo: [Swift.String : Any]?, deviceUser: Swift.String?, completion: @escaping WaterMeterSDK.WMLicenseCallback)
+  final public func activate(licenseKey: Swift.String, metadataInfo: [Swift.String : Any]?, deviceUser: Swift.String?, maToChuc: Swift.String? = nil, completion: @escaping WaterMeterSDK.WMLicenseCallback)
   #endif
   final public var isValid: Swift.Bool {
     get
@@ -716,6 +726,9 @@ public typealias WMLicenseCallback = (WaterMeterSDK.WMLicenseResult) -> Swift.Vo
     get
   }
   final public func syncNow(completion: @escaping WaterMeterSDK.WMLicenseCallback)
+  final public var isTrialMode: Swift.Bool {
+    get
+  }
   @objc deinit
 }
 @_hasMissingDesignatedInitializers final public class WMTrainingDataManager {

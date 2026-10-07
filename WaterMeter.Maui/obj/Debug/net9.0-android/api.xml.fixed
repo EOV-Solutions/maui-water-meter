@@ -72,8 +72,10 @@
         <parameter name="builder" type="com.eov.watermeter.WaterMeterSDK.CameraScanBuilder" jni-type="Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" />
       </method>
       <field deprecated="not deprecated" final="true" name="EXTRA_AUTO_CLOSE_ON_RESULT" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;auto_close_on_result&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="EXTRA_IMAGE_FILE_NAME" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;image_file_name&quot;" visibility="public" volatile="false" />
       <field deprecated="not deprecated" final="true" name="EXTRA_IMAGE_MAX_HEIGHT" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;image_max_height&quot;" visibility="public" volatile="false" />
       <field deprecated="not deprecated" final="true" name="EXTRA_IMAGE_MAX_WIDTH" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;image_max_width&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="EXTRA_IMAGE_SAVE_DIR" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;image_save_dir&quot;" visibility="public" volatile="false" />
       <field deprecated="not deprecated" final="true" name="EXTRA_RESULT_CONFIDENCE" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;result_confidence&quot;" visibility="public" volatile="false" />
       <field deprecated="not deprecated" final="true" name="EXTRA_RESULT_IMAGE_PATH" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;result_image_path&quot;" visibility="public" volatile="false" />
       <field deprecated="not deprecated" final="true" name="EXTRA_RESULT_TEXT" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;result_text&quot;" visibility="public" volatile="false" />
@@ -99,11 +101,17 @@
       <method abstract="false" deprecated="not deprecated" final="false" name="setAutoCloseOnResult" jni-signature="(Z)Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" bridge="false" native="false" return="com.eov.watermeter.WaterMeterSDK.CameraScanBuilder" jni-return="Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" static="false" synchronized="false" synthetic="false" visibility="public">
         <parameter name="autoClose" type="boolean" jni-type="Z" />
       </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setImageFileName" jni-signature="(Ljava/lang/String;)Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" bridge="false" native="false" return="com.eov.watermeter.WaterMeterSDK.CameraScanBuilder" jni-return="Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="fileName" type="java.lang.String" jni-type="Ljava/lang/String;" />
+      </method>
       <method abstract="false" deprecated="not deprecated" final="false" name="setImageMaxHeight" jni-signature="(I)Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" bridge="false" native="false" return="com.eov.watermeter.WaterMeterSDK.CameraScanBuilder" jni-return="Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" static="false" synchronized="false" synthetic="false" visibility="public">
         <parameter name="maxHeight" type="int" jni-type="I" />
       </method>
       <method abstract="false" deprecated="not deprecated" final="false" name="setImageMaxWidth" jni-signature="(I)Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" bridge="false" native="false" return="com.eov.watermeter.WaterMeterSDK.CameraScanBuilder" jni-return="Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" static="false" synchronized="false" synthetic="false" visibility="public">
         <parameter name="maxWidth" type="int" jni-type="I" />
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setImageSaveDir" jni-signature="(Ljava/lang/String;)Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" bridge="false" native="false" return="com.eov.watermeter.WaterMeterSDK.CameraScanBuilder" jni-return="Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" static="false" synchronized="false" synthetic="false" visibility="public">
+        <parameter name="dirPath" type="java.lang.String" jni-type="Ljava/lang/String;" />
       </method>
       <method abstract="false" deprecated="not deprecated" final="false" name="setShowCloseButton" jni-signature="(Z)Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" bridge="false" native="false" return="com.eov.watermeter.WaterMeterSDK.CameraScanBuilder" jni-return="Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;" static="false" synchronized="false" synthetic="false" visibility="public">
         <parameter name="show" type="boolean" jni-type="Z" />
@@ -298,9 +306,9 @@
         <parameter name="config" type="com.eov.watermeter.camera.CameraConfig" jni-type="Lcom/eov/watermeter/camera/CameraConfig;" />
         <parameter name="callback" type="com.eov.watermeter.camera.CameraCallback" jni-type="Lcom/eov/watermeter/camera/CameraCallback;" />
       </constructor>
-      <method abstract="false" deprecated="not deprecated" final="false" name="capturePhoto" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
+      <method abstract="false" deprecated="not deprecated" final="false" name="capturePhoto" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="true" synthetic="false" visibility="public" />
       <method abstract="false" deprecated="not deprecated" final="false" name="closeCamera" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
-      <method abstract="false" deprecated="not deprecated" final="false" name="focusAtPoint" jni-signature="(FF)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="focusAtPoint" jni-signature="(FF)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="true" synthetic="false" visibility="public">
         <parameter name="x" type="float" jni-type="F" />
         <parameter name="y" type="float" jni-type="F" />
       </method>
@@ -312,13 +320,13 @@
       <method abstract="false" deprecated="not deprecated" final="false" name="openCamera" jni-signature="(Landroid/view/TextureView;)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
         <parameter name="textureView" type="android.view.TextureView" jni-type="Landroid/view/TextureView;" />
       </method>
-      <method abstract="false" deprecated="not deprecated" final="false" name="setExposureCompensation" jni-signature="(F)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="setExposureCompensation" jni-signature="(F)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="true" synthetic="false" visibility="public">
         <parameter name="compensation" type="float" jni-type="F" />
       </method>
-      <method abstract="false" deprecated="not deprecated" final="false" name="setFlash" jni-signature="(Z)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="setFlash" jni-signature="(Z)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="true" synthetic="false" visibility="public">
         <parameter name="on" type="boolean" jni-type="Z" />
       </method>
-      <method abstract="false" deprecated="not deprecated" final="false" name="setZoom" jni-signature="(F)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="setZoom" jni-signature="(F)V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="true" synthetic="false" visibility="public">
         <parameter name="zoom" type="float" jni-type="F" />
       </method>
       <method abstract="false" deprecated="not deprecated" final="false" name="switchCamera" jni-signature="()V" bridge="false" native="false" return="void" jni-return="V" static="false" synchronized="false" synthetic="false" visibility="public" />
@@ -676,11 +684,14 @@
     </interface>
   </package>
   <package name="com.eov.watermeter.ui" jni-name="com/eov/watermeter/ui">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" jni-extends="Ljava/lang/Object;" final="true" name="AutoCaptureCriteria" static="false" visibility="" jni-signature="Lcom/eov/watermeter/ui/AutoCaptureCriteria;" />
     <class abstract="false" deprecated="not deprecated" extends="androidx.appcompat.app.AppCompatActivity" extends-generic-aware="androidx.appcompat.app.AppCompatActivity" jni-extends="Landroidx/appcompat/app/AppCompatActivity;" final="false" name="CameraScanActivity" static="false" visibility="public" jni-signature="Lcom/eov/watermeter/ui/CameraScanActivity;">
       <constructor deprecated="not deprecated" final="false" name="CameraScanActivity" jni-signature="()V" bridge="false" static="false" type="com.eov.watermeter.ui.CameraScanActivity" synthetic="false" visibility="public" />
       <field deprecated="not deprecated" final="true" name="EXTRA_AUTO_CLOSE_ON_RESULT" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;auto_close_on_result&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="EXTRA_IMAGE_FILE_NAME" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;image_file_name&quot;" visibility="public" volatile="false" />
       <field deprecated="not deprecated" final="true" name="EXTRA_IMAGE_MAX_HEIGHT" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;image_max_height&quot;" visibility="public" volatile="false" />
       <field deprecated="not deprecated" final="true" name="EXTRA_IMAGE_MAX_WIDTH" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;image_max_width&quot;" visibility="public" volatile="false" />
+      <field deprecated="not deprecated" final="true" name="EXTRA_IMAGE_SAVE_DIR" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;image_save_dir&quot;" visibility="public" volatile="false" />
       <field deprecated="not deprecated" final="true" name="EXTRA_RESULT_CONFIDENCE" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;result_confidence&quot;" visibility="public" volatile="false" />
       <field deprecated="not deprecated" final="true" name="EXTRA_RESULT_IMAGE_PATH" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;result_image_path&quot;" visibility="public" volatile="false" />
       <field deprecated="not deprecated" final="true" name="EXTRA_RESULT_TEXT" jni-signature="Ljava/lang/String;" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;result_text&quot;" visibility="public" volatile="false" />

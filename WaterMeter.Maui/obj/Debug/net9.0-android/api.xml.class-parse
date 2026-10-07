@@ -459,6 +459,19 @@
       <field
         deprecated="not deprecated"
         final="true"
+        name="EXTRA_IMAGE_FILE_NAME"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;image_file_name&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
         name="EXTRA_IMAGE_MAX_HEIGHT"
         static="true"
         synthetic="false"
@@ -480,6 +493,19 @@
         type-generic-aware="java.lang.String"
         jni-signature="Ljava/lang/String;"
         value="&quot;image_max_width&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="EXTRA_IMAGE_SAVE_DIR"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;image_save_dir&quot;"
         visibility="public"
         volatile="false" />
       <field
@@ -698,6 +724,25 @@
         abstract="false"
         deprecated="not deprecated"
         final="false"
+        name="setImageFileName"
+        native="false"
+        return="com.eov.watermeter.WaterMeterSDK.CameraScanBuilder"
+        jni-return="Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;">
+        <parameter
+          name="fileName"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
         name="setImageMaxHeight"
         native="false"
         return="com.eov.watermeter.WaterMeterSDK.CameraScanBuilder"
@@ -731,6 +776,25 @@
           name="maxWidth"
           type="int"
           jni-type="I" />
+      </method>
+      <method
+        abstract="false"
+        deprecated="not deprecated"
+        final="false"
+        name="setImageSaveDir"
+        native="false"
+        return="com.eov.watermeter.WaterMeterSDK.CameraScanBuilder"
+        jni-return="Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;"
+        static="false"
+        synchronized="false"
+        visibility="public"
+        bridge="false"
+        synthetic="false"
+        jni-signature="(Ljava/lang/String;)Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;">
+        <parameter
+          name="dirPath"
+          type="java.lang.String"
+          jni-type="Ljava/lang/String;" />
       </method>
       <method
         abstract="false"
@@ -2174,7 +2238,7 @@
         return="void"
         jni-return="V"
         static="false"
-        synchronized="false"
+        synchronized="true"
         visibility="public"
         bridge="false"
         synthetic="false"
@@ -2202,7 +2266,7 @@
         return="void"
         jni-return="V"
         static="false"
-        synchronized="false"
+        synchronized="true"
         visibility="public"
         bridge="false"
         synthetic="false"
@@ -2314,7 +2378,7 @@
         return="void"
         jni-return="V"
         static="false"
-        synchronized="false"
+        synchronized="true"
         visibility="public"
         bridge="false"
         synthetic="false"
@@ -2333,7 +2397,7 @@
         return="void"
         jni-return="V"
         static="false"
-        synchronized="false"
+        synchronized="true"
         visibility="public"
         bridge="false"
         synthetic="false"
@@ -2352,7 +2416,7 @@
         return="void"
         jni-return="V"
         static="false"
-        synchronized="false"
+        synchronized="true"
         visibility="public"
         bridge="false"
         synthetic="false"
@@ -5239,6 +5303,18 @@
     <class
       abstract="false"
       deprecated="not deprecated"
+      jni-extends="Ljava/lang/Object;"
+      extends="java.lang.Object"
+      extends-generic-aware="java.lang.Object"
+      final="true"
+      name="AutoCaptureCriteria"
+      jni-signature="Lcom/eov/watermeter/ui/AutoCaptureCriteria;"
+      source-file-name="AutoCaptureCriteria.java"
+      static="false"
+      visibility="" />
+    <class
+      abstract="false"
+      deprecated="not deprecated"
       jni-extends="Landroidx/appcompat/app/AppCompatActivity;"
       extends="androidx.appcompat.app.AppCompatActivity"
       extends-generic-aware="androidx.appcompat.app.AppCompatActivity"
@@ -5423,6 +5499,19 @@
       <field
         deprecated="not deprecated"
         final="true"
+        name="EXTRA_IMAGE_FILE_NAME"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;image_file_name&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
         name="EXTRA_IMAGE_MAX_HEIGHT"
         static="true"
         synthetic="false"
@@ -5444,6 +5533,19 @@
         type-generic-aware="java.lang.String"
         jni-signature="Ljava/lang/String;"
         value="&quot;image_max_width&quot;"
+        visibility="public"
+        volatile="false" />
+      <field
+        deprecated="not deprecated"
+        final="true"
+        name="EXTRA_IMAGE_SAVE_DIR"
+        static="true"
+        synthetic="false"
+        transient="false"
+        type="java.lang.String"
+        type-generic-aware="java.lang.String"
+        jni-signature="Ljava/lang/String;"
+        value="&quot;image_save_dir&quot;"
         visibility="public"
         volatile="false" />
       <field

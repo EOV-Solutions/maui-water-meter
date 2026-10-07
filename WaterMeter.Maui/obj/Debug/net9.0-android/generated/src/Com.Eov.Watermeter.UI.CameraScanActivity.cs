@@ -22,6 +22,10 @@ namespace Com.Eov.Watermeter.UI {
 		[Register ("EXTRA_AUTO_CLOSE_ON_RESULT")]
 		public const string ExtraAutoCloseOnResult = (string) "auto_close_on_result";
 
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.eov.watermeter.ui']/class[@name='CameraScanActivity']/field[@name='EXTRA_IMAGE_FILE_NAME']"
+		[Register ("EXTRA_IMAGE_FILE_NAME")]
+		public const string ExtraImageFileName = (string) "image_file_name";
+
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.eov.watermeter.ui']/class[@name='CameraScanActivity']/field[@name='EXTRA_IMAGE_MAX_HEIGHT']"
 		[Register ("EXTRA_IMAGE_MAX_HEIGHT")]
 		public const string ExtraImageMaxHeight = (string) "image_max_height";
@@ -29,6 +33,10 @@ namespace Com.Eov.Watermeter.UI {
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.eov.watermeter.ui']/class[@name='CameraScanActivity']/field[@name='EXTRA_IMAGE_MAX_WIDTH']"
 		[Register ("EXTRA_IMAGE_MAX_WIDTH")]
 		public const string ExtraImageMaxWidth = (string) "image_max_width";
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.eov.watermeter.ui']/class[@name='CameraScanActivity']/field[@name='EXTRA_IMAGE_SAVE_DIR']"
+		[Register ("EXTRA_IMAGE_SAVE_DIR")]
+		public const string ExtraImageSaveDir = (string) "image_save_dir";
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.eov.watermeter.ui']/class[@name='CameraScanActivity']/field[@name='EXTRA_RESULT_CONFIDENCE']"
 		[Register ("EXTRA_RESULT_CONFIDENCE")]

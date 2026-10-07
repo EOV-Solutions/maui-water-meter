@@ -97,6 +97,21 @@ public class ScanOptions
 
     /// <summary>Max height for saved image in pixels.</summary>
     public int? ImageMaxHeight { get; set; }
+
+    /// <summary>
+    /// Directory to save the captured image: absolute path or file:// URL
+    /// (e.g. <c>FileSystem.AppDataDirectory</c>). Created if missing. Must be writable by the app;
+    /// otherwise the SDK default directory is used. Uses SDK default directory if null or empty.
+    /// Always read the actual path from <see cref="ScanResult.ImagePath"/>.
+    /// </summary>
+    public string? ImageSaveDir { get; set; }
+
+    /// <summary>
+    /// File name of the captured image, without directory (e.g. "KH001_202610.jpg").
+    /// ".jpg" is appended if missing; an existing file with the same name is overwritten.
+    /// Uses "&lt;epoch ms&gt;.jpg" if null or empty.
+    /// </summary>
+    public string? ImageFileName { get; set; }
 }
 
 /// <summary>

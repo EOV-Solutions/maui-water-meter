@@ -114,6 +114,10 @@ namespace ApiDefinition {
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
 		public unsafe extern static void void_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3, NativeHandle arg4);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
+		public unsafe extern static void void_objc_msgSend_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3, NativeHandle arg4, NativeHandle arg5);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
+		public unsafe extern static void void_objc_msgSendSuper_NativeHandle_NativeHandle_NativeHandle_NativeHandle_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle arg2, NativeHandle arg3, NativeHandle arg4, NativeHandle arg5);
+		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSend")]
 		public unsafe extern static NativeHandle NativeHandle_objc_msgSend_NativeHandle_ref_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle* arg2);
 		[DllImport (LIBOBJC_DYLIB, EntryPoint="objc_msgSendSuper")]
 		public unsafe extern static NativeHandle NativeHandle_objc_msgSendSuper_NativeHandle_ref_NativeHandle (IntPtr receiver, IntPtr selector, NativeHandle arg1, NativeHandle* arg2);

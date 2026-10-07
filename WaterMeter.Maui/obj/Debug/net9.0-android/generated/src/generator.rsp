@@ -4,6 +4,7 @@
 --enummetadata="obj/Debug/net9.0-android/generated/metadata"
 --assembly=WaterMeter.Maui
 --ref="/Users/eov-mac/.nuget/packages/microsoft.netcore.app.ref/9.0.13/ref/net9.0/mscorlib.dll"
+--ref="/Users/eov-mac/code/sdk/maui-water-meter/WaterMeter.Maui/obj/Debug/net9.0-android/_Microsoft.Android.Resource.Designer.dll"
 --ref="/Users/eov-mac/.nuget/packages/googlegson/2.11.0.3/lib/net8.0-android34.0/GoogleGson.dll"
 --ref="/Users/eov-mac/.nuget/packages/microsoft.android.ref.35/35.0.105/ref/net9.0/Java.Interop.dll"
 --ref="/Users/eov-mac/.nuget/packages/xamarin.google.code.findbugs.jsr305/3.0.2.16/lib/net8.0-android34.0/Jsr305Binding.dll"

@@ -9,7 +9,7 @@
             Interface for Water Meter SDK platform-specific implementations.
             </summary>
         </member>
-        <member name="M:WaterMeter.Maui.IWaterMeterService.InitializeLicenseAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+        <member name="M:WaterMeter.Maui.IWaterMeterService.InitializeLicenseAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.String)">
             <summary>
             Initialize SDK with license key (required before scanning).
             </summary>
@@ -172,6 +172,21 @@
         <member name="P:WaterMeter.Maui.ScanOptions.ImageMaxHeight">
             <summary>Max height for saved image in pixels.</summary>
         </member>
+        <member name="P:WaterMeter.Maui.ScanOptions.ImageSaveDir">
+            <summary>
+            Directory to save the captured image: absolute path or file:// URL
+            (e.g. <c>FileSystem.AppDataDirectory</c>). Created if missing. Must be writable by the app;
+            otherwise the SDK default directory is used. Uses SDK default directory if null or empty.
+            Always read the actual path from <see cref="P:WaterMeter.Maui.ScanResult.ImagePath"/>.
+            </summary>
+        </member>
+        <member name="P:WaterMeter.Maui.ScanOptions.ImageFileName">
+            <summary>
+            File name of the captured image, without directory (e.g. "KH001_202610.jpg").
+            ".jpg" is appended if missing; an existing file with the same name is overwritten.
+            Uses "&lt;epoch ms&gt;.jpg" if null or empty.
+            </summary>
+        </member>
         <member name="T:WaterMeter.Maui.InitializeOptions">
             <summary>
             SDK initialization options (iOS only, Android auto-initializes).
@@ -261,7 +276,7 @@
             Get the platform-specific service implementation.
             </summary>
         </member>
-        <member name="M:WaterMeter.Maui.WaterMeterSdk.InitializeLicenseAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+        <member name="M:WaterMeter.Maui.WaterMeterSdk.InitializeLicenseAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.String)">
             <summary>
             Initialize SDK with license key (required before scanning).
             </summary>

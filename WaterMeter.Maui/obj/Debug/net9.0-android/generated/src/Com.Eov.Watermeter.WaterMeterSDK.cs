@@ -22,6 +22,10 @@ namespace Com.Eov.Watermeter {
 		[Register ("EXTRA_AUTO_CLOSE_ON_RESULT")]
 		public const string ExtraAutoCloseOnResult = (string) "auto_close_on_result";
 
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.eov.watermeter']/class[@name='WaterMeterSDK']/field[@name='EXTRA_IMAGE_FILE_NAME']"
+		[Register ("EXTRA_IMAGE_FILE_NAME")]
+		public const string ExtraImageFileName = (string) "image_file_name";
+
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.eov.watermeter']/class[@name='WaterMeterSDK']/field[@name='EXTRA_IMAGE_MAX_HEIGHT']"
 		[Register ("EXTRA_IMAGE_MAX_HEIGHT")]
 		public const string ExtraImageMaxHeight = (string) "image_max_height";
@@ -29,6 +33,10 @@ namespace Com.Eov.Watermeter {
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.eov.watermeter']/class[@name='WaterMeterSDK']/field[@name='EXTRA_IMAGE_MAX_WIDTH']"
 		[Register ("EXTRA_IMAGE_MAX_WIDTH")]
 		public const string ExtraImageMaxWidth = (string) "image_max_width";
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.eov.watermeter']/class[@name='WaterMeterSDK']/field[@name='EXTRA_IMAGE_SAVE_DIR']"
+		[Register ("EXTRA_IMAGE_SAVE_DIR")]
+		public const string ExtraImageSaveDir = (string) "image_save_dir";
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.eov.watermeter']/class[@name='WaterMeterSDK']/field[@name='EXTRA_RESULT_CONFIDENCE']"
 		[Register ("EXTRA_RESULT_CONFIDENCE")]
@@ -128,6 +136,40 @@ namespace Com.Eov.Watermeter {
 				}
 			}
 
+			static Delegate? cb_setImageFileName_SetImageFileName_Ljava_lang_String__Lcom_eov_watermeter_WaterMeterSDK_CameraScanBuilder_;
+#pragma warning disable 0169
+			static Delegate GetSetImageFileName_Ljava_lang_String_Handler ()
+			{
+				if (cb_setImageFileName_SetImageFileName_Ljava_lang_String__Lcom_eov_watermeter_WaterMeterSDK_CameraScanBuilder_ == null)
+					cb_setImageFileName_SetImageFileName_Ljava_lang_String__Lcom_eov_watermeter_WaterMeterSDK_CameraScanBuilder_ = JNINativeWrapper.CreateDelegate (new _JniMarshal_PPL_L (n_SetImageFileName_Ljava_lang_String_));
+				return cb_setImageFileName_SetImageFileName_Ljava_lang_String__Lcom_eov_watermeter_WaterMeterSDK_CameraScanBuilder_;
+			}
+
+			static IntPtr n_SetImageFileName_Ljava_lang_String_ (IntPtr jnienv, IntPtr native__this, IntPtr native_fileName)
+			{
+				var __this = global::Java.Lang.Object.GetObject<global::Com.Eov.Watermeter.WaterMeterSDK.CameraScanBuilder> (jnienv, native__this, JniHandleOwnership.DoNotTransfer)!;
+				var fileName = JNIEnv.GetString (native_fileName, JniHandleOwnership.DoNotTransfer);
+				IntPtr __ret = JNIEnv.ToLocalJniHandle (__this.SetImageFileName (fileName));
+				return __ret;
+			}
+#pragma warning restore 0169
+
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter']/class[@name='WaterMeterSDK.CameraScanBuilder']/method[@name='setImageFileName' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+			[Register ("setImageFileName", "(Ljava/lang/String;)Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;", "GetSetImageFileName_Ljava_lang_String_Handler")]
+			public virtual unsafe global::Com.Eov.Watermeter.WaterMeterSDK.CameraScanBuilder? SetImageFileName (string? fileName)
+			{
+				const string __id = "setImageFileName.(Ljava/lang/String;)Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;";
+				IntPtr native_fileName = JNIEnv.NewString ((string?)fileName);
+				try {
+					JniArgumentValue* __args = stackalloc JniArgumentValue [1];
+					__args [0] = new JniArgumentValue (native_fileName);
+					var __rm = _members.InstanceMethods.InvokeVirtualObjectMethod (__id, this, __args);
+					return global::Java.Lang.Object.GetObject<global::Com.Eov.Watermeter.WaterMeterSDK.CameraScanBuilder> (__rm.Handle, JniHandleOwnership.TransferLocalRef);
+				} finally {
+					JNIEnv.DeleteLocalRef (native_fileName);
+				}
+			}
+
 			static Delegate? cb_setImageMaxHeight_SetImageMaxHeight_I_Lcom_eov_watermeter_WaterMeterSDK_CameraScanBuilder_;
 #pragma warning disable 0169
 			static Delegate GetSetImageMaxHeight_IHandler ()
@@ -185,6 +227,40 @@ namespace Com.Eov.Watermeter {
 					var __rm = _members.InstanceMethods.InvokeVirtualObjectMethod (__id, this, __args);
 					return global::Java.Lang.Object.GetObject<global::Com.Eov.Watermeter.WaterMeterSDK.CameraScanBuilder> (__rm.Handle, JniHandleOwnership.TransferLocalRef);
 				} finally {
+				}
+			}
+
+			static Delegate? cb_setImageSaveDir_SetImageSaveDir_Ljava_lang_String__Lcom_eov_watermeter_WaterMeterSDK_CameraScanBuilder_;
+#pragma warning disable 0169
+			static Delegate GetSetImageSaveDir_Ljava_lang_String_Handler ()
+			{
+				if (cb_setImageSaveDir_SetImageSaveDir_Ljava_lang_String__Lcom_eov_watermeter_WaterMeterSDK_CameraScanBuilder_ == null)
+					cb_setImageSaveDir_SetImageSaveDir_Ljava_lang_String__Lcom_eov_watermeter_WaterMeterSDK_CameraScanBuilder_ = JNINativeWrapper.CreateDelegate (new _JniMarshal_PPL_L (n_SetImageSaveDir_Ljava_lang_String_));
+				return cb_setImageSaveDir_SetImageSaveDir_Ljava_lang_String__Lcom_eov_watermeter_WaterMeterSDK_CameraScanBuilder_;
+			}
+
+			static IntPtr n_SetImageSaveDir_Ljava_lang_String_ (IntPtr jnienv, IntPtr native__this, IntPtr native_dirPath)
+			{
+				var __this = global::Java.Lang.Object.GetObject<global::Com.Eov.Watermeter.WaterMeterSDK.CameraScanBuilder> (jnienv, native__this, JniHandleOwnership.DoNotTransfer)!;
+				var dirPath = JNIEnv.GetString (native_dirPath, JniHandleOwnership.DoNotTransfer);
+				IntPtr __ret = JNIEnv.ToLocalJniHandle (__this.SetImageSaveDir (dirPath));
+				return __ret;
+			}
+#pragma warning restore 0169
+
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.eov.watermeter']/class[@name='WaterMeterSDK.CameraScanBuilder']/method[@name='setImageSaveDir' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+			[Register ("setImageSaveDir", "(Ljava/lang/String;)Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;", "GetSetImageSaveDir_Ljava_lang_String_Handler")]
+			public virtual unsafe global::Com.Eov.Watermeter.WaterMeterSDK.CameraScanBuilder? SetImageSaveDir (string? dirPath)
+			{
+				const string __id = "setImageSaveDir.(Ljava/lang/String;)Lcom/eov/watermeter/WaterMeterSDK$CameraScanBuilder;";
+				IntPtr native_dirPath = JNIEnv.NewString ((string?)dirPath);
+				try {
+					JniArgumentValue* __args = stackalloc JniArgumentValue [1];
+					__args [0] = new JniArgumentValue (native_dirPath);
+					var __rm = _members.InstanceMethods.InvokeVirtualObjectMethod (__id, this, __args);
+					return global::Java.Lang.Object.GetObject<global::Com.Eov.Watermeter.WaterMeterSDK.CameraScanBuilder> (__rm.Handle, JniHandleOwnership.TransferLocalRef);
+				} finally {
+					JNIEnv.DeleteLocalRef (native_dirPath);
 				}
 			}
 

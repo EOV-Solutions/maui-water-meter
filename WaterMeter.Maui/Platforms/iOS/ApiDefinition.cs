@@ -197,6 +197,14 @@ interface WMScannerConfigurationObjC
     [Export("imageMaxHeight")]
     nint ImageMaxHeight { get; set; }
 
+    [Export("imageSaveDir")]
+    [NullAllowed]
+    string ImageSaveDir { get; set; }
+
+    [Export("imageFileName")]
+    [NullAllowed]
+    string ImageFileName { get; set; }
+
     [Export("initWithAutoCaptureSet:minConfidenceSet:flashEnabled:showCloseButton:title:imageMaxWidth:imageMaxHeight:")]
     NativeHandle Constructor(nint autoCaptureSet, float minConfidenceSet, bool flashEnabled, bool showCloseButton, [NullAllowed] string title, nint imageMaxWidth, nint imageMaxHeight);
 }

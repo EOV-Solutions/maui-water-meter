@@ -168,6 +168,12 @@ public class WaterMeterServiceAndroid : IWaterMeterService
             if (options.ImageMaxHeight.HasValue)
                 intent.PutExtra(CameraScanActivity.ExtraImageMaxHeight, options.ImageMaxHeight.Value);
 
+            if (!string.IsNullOrEmpty(options.ImageSaveDir))
+                intent.PutExtra(CameraScanActivity.ExtraImageSaveDir, options.ImageSaveDir);
+
+            if (!string.IsNullOrEmpty(options.ImageFileName))
+                intent.PutExtra(CameraScanActivity.ExtraImageFileName, options.ImageFileName);
+
             // Register for activity result
             ActivityResultCallbackHelper.RegisterCallback(RequestCameraScan, (resultCode, data) =>
             {
